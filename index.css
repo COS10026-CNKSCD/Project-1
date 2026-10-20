@@ -1,0 +1,339 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* font: "Trebuchet MS", sans-serif;
+   Hình vuông: #F0EFF4, #293650,
+   chữ : đen, #006199 
+   */
+/* =========================
+    HEADER / NAVIGATION 
+=========================*/
+
+/* Arrange the navigation items horizontally */
+nav {
+    display: flex;
+    justify-content: space-between; /* Place items at opposite ends */
+    align-items: center; /* Vertically center the logo and links */
+    padding: 24px 38px;
+}
+
+/* Group the company logo and navigation links */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Arrange the navigation links in a horizontal row */
+.navigation_links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Style the navigation links */
+.navigation_links a {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 15px;
+    color: #293650;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-radius: 50px;
+    padding: 12px 24px;
+}
+
+/* Change the link appearance when hovered */
+.navigation_links a:hover {
+    background-color: #F0EFF4;
+    color: #000000;
+}
+
+/* =========================
+   SEARCH FORM
+========================= */
+
+/* Arrange the search input and button horizontally */
+.search_form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Style the search input field */
+.search_form input[type="search"] {
+    width: 320px;
+    height: 42px;
+    padding: 0 16px;
+    border: none;     /* Remove the default border */
+    border-radius: 24px;
+    background-color: #F0EFF4;
+    font-size: 14px;
+}
+
+/* Style the search form button */
+.search_form button {
+    height: 42px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 24px;
+    background-color: #293650;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO BANNER IMAGE
+========================= */
+
+/* Set the size and rounded corners of the banner */
+.hero-image {
+    margin: 0 3.6%;
+    height: 540px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+/* Make the image fill the banner without distortion */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+/* Establish the positioning reference for hero content */
+.hero {
+    position: relative;
+}
+
+/* Position the hero content over the banner image */
+.hero-content {
+    position: absolute;
+    left: 7%;
+    bottom: 60px;
+    z-index: 1;
+}
+
+/* =========================
+   CALL-TO-ACTION BUTTON
+========================= */
+
+/* Style the Explore Careers button */
+.btn-primary {
+    display: inline-block;
+    background-color: #006199;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Darken the button when hovered */
+.btn-primary:hover {
+    background-color: #003B5C;
+}
+/*---------------------------------------------------------*/
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+/* Two-column layout: intro text on the left, feature cards on the right */
+.intro-section {
+    display: flex;
+    justify-content: space-between; /* Put the text and cards at opposite sides */
+    align-items: center;            /* Vertically align both sides */
+    padding: 60px 3.6%;             /* Side padding matches the hero image margin */
+    gap: 40px;                      /* Space between the text and the cards */
+}
+
+/* Left column: introduction text */
+.intro {
+    flex: 1;                        /* Take up all remaining space */
+    min-width: 0;                   /* Allow the text to shrink instead of pushing the cards out */
+    align-self: flex-start;         /* Align the text section to the top */
+}
+
+/* Introduction heading */
+.intro h2 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Introduction paragraph */
+.intro p {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: black;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+/* Right column: fixed-width container holding the three cards */
+.features-section {
+    flex: 0 0 520px;                /* Do not grow or shrink; width is 520px */
+    max-width: 100%;                /* Never exceed the width of the parent */
+}
+
+/* Stack the cards vertically */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;                      /* Space between cards */
+}
+
+/* Individual feature card */
+.feature-card {
+    background-color: #8D9BB5;
+    border-radius: 20px;
+    padding: 24px;
+    width: 100%;                    /* Fill the column width */
+}
+
+/* Card title */
+.feature-card h3 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 19px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Card text */
+.feature-card p {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: white;
+    margin: 0;
+}
+
+/* =========================
+   COMPANY STATISTICS
+========================= */
+
+/* Arrange the statistics items in a horizontal row */
+.company-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+/* Set the layout for each statistics item */
+.stat-item {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+/* Position each icon and control the spacing around it */
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin: 60px auto 2px;
+}
+
+/* Style the statistics values */
+.stat-item h4 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 21px;
+    color: #006199;
+    margin: 0 0 10px;
+}
+
+/* Style the descriptions below the statistics values */
+.stat-item p {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444444;
+    margin: 0;
+}
+
+/* Set the size and fit of the icon images */
+.stat-icon img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+}
+/*---------------------------------------------------------*/
+
+/* =========================
+   PROJECTS
+========================= */
+/* Style the main featured projects section */
+.intro-project {
+    background-color: #F0EFF4;
+    border-radius: 28px;
+    padding: 40px;
+    margin: 50px 3.6%;
+}
+
+/* Arrange project cards in a horizontal row */
+.projects {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Style each project card */
+.project-card {
+    flex: 1;
+    min-width: 0;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    box-sizing: border-box;
+}
+
+/* Make project images fill their cards */
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Position project titles and descriptions over the images */
+.project-card h3,
+.project-card p {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    color: white;
+}
+
+/* Position the project title near the bottom */
+.project-card h3 {
+    bottom: 55px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Position the project description at the bottom */
+.project-card p {
+    bottom: 24px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
