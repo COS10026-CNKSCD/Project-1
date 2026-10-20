@@ -215,3 +215,67 @@ nav {
     color: white;
     margin: 0;
 }
+/*---------------------------------------------------------*/
+
+/* =========================
+   PROJECTS
+========================= */
+/* Style the main featured projects section */
+.intro-project {
+    background-color: #F0EFF4;
+    border-radius: 28px;
+    padding: 40px;
+    margin: 50px 3.6%;
+}
+
+/* Arrange project cards in a horizontal row */
+.projects {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Style each project card */
+.project-card {
+    flex: 1;
+    min-width: 0;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    box-sizing: border-box;
+}
+
+/* Make project images fill their cards */
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Position project titles and descriptions over the images */
+.project-card h3,
+.project-card p {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    color: white;
+}
+
+/* Position the project title near the bottom */
+.project-card h3 {
+    bottom: 55px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Position the project description at the bottom */
+.project-card p {
+    bottom: 24px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
