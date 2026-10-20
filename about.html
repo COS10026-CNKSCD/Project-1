@@ -3,29 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Our Team</title>
+    <title>About Us</title>
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="./styles/about.css">
     <!-- Embedded CSS -->
     <style></style>
 </head>
 <body>
-    <header></header>
+        <nav>
+            <!-- Company logo and main navigation -->
+            <div class="nav-left">
+
+                <!-- Company Logo - return the user to the Home page -->
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Company Logo" width="30%">
+                </a>
+
+                <!-- Navigation links to the main website pages -->
+                <div class="navigation_links">
+                    <a href="index.html">Home</a>
+                    <a href="jobs.html">Jobs</a>
+                    <a href="apply.html">Apply</a>
+                    <a href="about.html" class="active">About us</a>
+                </div>
+
+            </div>
+        </nav>
+
+            <!-- Search form for entering job titles or keywords -->
+            <form class="search_form" action="jobs.html" method="get">
+                <input
+                    type="search"
+                    name="keyword"
+                    placeholder="Search jobs or keywords..."
+                    aria-label="Search jobs or keywords">
+
+                <!-- Search button for the search form -->
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+    </section>
+
     <main id="main-content">
         <!-- Section 1: Team introduction includes: group name, class day/time (nested list) -->
-        <section class="intro-section">
+        <section class="team-intro-section">
             <div class="page-container">
                 <h1>OUR TEAM</h1>
                 <p class="intro-description">I will add the content then!</p>
 
                 <!-- The requirement for nested list -->
                 <ul class="group-info">
-                    <li> Group name: CAYNGAYKHONGSOCHETDUNG
+                    <li style="list-style-type: square;"> Group name: <strong>CAYNGAYKHONGSOCHETDUNG</strong>
                         <ul>
-                            <li style="list-style-type: square;"><strong>Class day:</strong> Friday</li>
-                            <li style="list-style-type: square;"><strong>Class time:</strong> [8 a.m - 12 p.m] or [8 a.m - 10 a.m]</li>
-                            <li style="list-style-type: square;"><strong>Campus:</strong> Swinburne Can Tho</li>
+                            <li style="list-style-type: disc;"><strong>Class day:</strong> Friday</li>
+                            <li style="list-style-type: disc;"><strong>Class time:</strong> [8 a.m - 12 p.m] or [8 a.m - 10 a.m]</li>
+                            <li style="list-style-type: disc;"><strong>Campus:</strong> Swinburne Can Tho</li>
                         </ul>
                     </li>
                 </ul>
@@ -34,7 +66,7 @@
 
         <!-- Section 2: A single GROUP photo (not individual), <300 KB -->
         <section class="photo-section">
-            <div class="page container">
+            <div class="page-container">
                 <h2>We had a good time together!Hope so!! </h2>
                 <figure class="group-photo">
                     <img src="images/background.jpg">

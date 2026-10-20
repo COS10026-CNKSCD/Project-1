@@ -6,3 +6,110 @@ Last modified: 20/10/2026
 Description: CSS file for About Page
 */
 
+/* 1. Shared page settings ------------------------------------------------ */
+:root {
+    --primary-color: #006199;       /* Blue headings and accents */
+    --navy-color: #293650;          /* Navigation and dark sections */
+    --hover-color: #003B5C;         /* Dark blue for hover effects */
+    --light-background: #F0EFF4;    /* Light lavender section background */
+    --card-color: #8D9BB5;         /* Muted blue from the Home page */
+    --text-color: #444444;          /* Default paragraph colour */
+    --white-color: #FFFFFF;
+    --border-color: #D8DCE6;
+    --main-font: "Trebuchet MS", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--main-font);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--white-color);
+}
+
+/* Each About section uses the same 3.6% side spacing as Home. */
+main > section {
+    padding: 60px 3.6%;
+}
+
+main h1, main h2, main h3 {
+    font-family: var(--main-font);
+    line-height: 1.25;
+}
+
+main h2 {
+    margin: 0 0 20px;
+    font-size: 30px;
+    color: var(--primary-color);
+}
+
+main h3 {
+    color: var(--navy-color);
+    font-size: 20px;
+}
+
+main p {
+    margin-top: 0;
+}
+
+/* --------------------- 2. INTRODUCTION AND NESTED LIST --------------------- */
+main .team-intro-section {
+    display: block;
+    margin: 30px 3.6% 0;
+    padding: 30px 50px 36px;
+    border-radius: 25px;
+}
+
+.team-intro-section h1 {
+    margin: 10px 0 10px;;
+    color: var(--primary-color);
+    font-size: 2.6rem;
+    line-height: 1.3;
+}
+
+.intro-description {
+    margin-bottom: 25px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.group-info {
+    /* The width fits the content inside */
+    width: fit-content; 
+    max-width: 100%;
+    margin: 0;
+    padding: 30px 42px 30px 48px;
+    background-color: var(--white-color);
+    border-left: 4px solid var(--primary-color);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 25px;
+    box-shadow: 24px 10px 15px 0px rgba(0, 0, 0, 0.20);
+}
+
+.group-info > li {
+    color: var(--navy-color);
+}
+
+.group-info ul {
+    margin-top: 7px;
+    padding-right: 20px;
+}
+
+.group-info ul li {
+    padding: 3px 0;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.group-info li::marker {
+    color: var(--primary-color);
+}
+
+/* 4. GROUP PHOTO ---------------------------------------------- */
+.photo-section {
+    background-color: var(--white-color);
+}
+
+
+
