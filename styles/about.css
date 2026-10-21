@@ -128,7 +128,7 @@ main .team-intro-section {
 }
 
 .member-profile {
-    padding: 24px;
+    padding: 10px 24px 24px;
     border: 1px solid var(--border-color);
     border-radius: 20px;
     background-color: var(--white-color);
