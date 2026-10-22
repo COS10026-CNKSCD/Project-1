@@ -33,9 +33,7 @@ description: apply.css
 #applytitle {
     text-align: center;
     color: darkslategray;
-    font-size: 28px;
     margin-bottom: 24px;
-    font-weight: bold;
 }
 
 /* General styling for fieldsets */
@@ -62,7 +60,7 @@ description: apply.css
     padding: 12px 14px;
     border: 1px solid silver;
     border-radius: 8px;
-    font-family: inherit;
+    font-family: "Trebuchet MS", sans-serif;
     box-sizing: border-box;
     background-color: white;
     color: black;
@@ -87,7 +85,6 @@ description: apply.css
     border: none;
     border-radius: 8px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
 }
 
 /* Submit button customization */
