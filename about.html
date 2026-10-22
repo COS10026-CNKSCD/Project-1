@@ -6,6 +6,7 @@
     <title>About Us</title>
     <!-- External CSS -->
     <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles.css">
     <!-- Embedded CSS -->
     <style>
         main h1, h2, h3 {
@@ -15,28 +16,33 @@
     </style>
 </head>
 <body>
+   <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+    <section class="hero">
+        
+        <!-- Header navigation bar -->
         <nav>
-            <!-- Company logo and main navigation -->
-            <div class="nav-left">
+             <!-- Company logo and main navigation links -->
+             <div class="nav-left">
 
                 <!-- Company Logo - return the user to the Home page -->
                 <a href="index.html" class="logo">
-                    <img src="images/logo.jpg" alt="Company Logo" width="30%">
+                    <img src="" alt="">
                 </a>
 
                 <!-- Navigation links to the main website pages -->
-                <div class="navigation_links">
-                    <a href="index.html">Home</a>
+                 <div class="navigation_links">
+                    <a href="index.html" class="active">Home</a>
                     <a href="jobs.html">Jobs</a>
                     <a href="apply.html">Apply</a>
-                    <a href="about.html" class="active">About us</a>
-                </div>
+                    <a href="about.html">About us</a>
+                 </div>
 
-            </div>
-        </nav>
+             </div>
 
-            <!-- Search form for entering job titles or keywords -->
-            <form class="search_form" action="jobs.html" method="get">
+             <!-- Search form for entering job titles or keywords -->
+             <form class="search_form" action="jobs.html" method="get">
                 <input
                     type="search"
                     name="keyword"
@@ -45,9 +51,8 @@
 
                 <!-- Search button for the search form -->
                 <button type="submit">Search</button>
-            </form>
+             </form>
         </nav>
-    </section>
 
     <main id="main-content">
         <!-- Section 1: Team introduction includes: group name, class day/time (nested list) -->
@@ -155,31 +160,31 @@
 
                         <tbody>
                             <tr>
-                                <th scope="row">Vy Ái</th>
+                                <th>Vy Ái</th>
                                 <td>JOB</td>
                                 <td>SNACK</td>
-                                <td>HOMETOWN</td>
+                                <td>Cần Thơ</td>
                             </tr>
                             
                             <tr>
-                                <th scope="row">Thanh Ngân</th>
+                                <th>Thanh Ngân</th>
                                 <td>JOB</td>
                                 <td>SNACK</td>
-                                <td>HOMETOWN</td>
+                                <td>Vĩnh Long</td>
                             </tr>
 
                             <tr>
-                                <th scope="row">Bảo Ngọc</th>
+                                <th>Bảo Ngọc</th>
                                 <td>JOB</td>
                                 <td>SNACK</td>
-                                <td>HOMETOWN</td>
+                                <td>Vĩnh Châu</td>
                             </tr>
 
                             <tr>
-                                <th scope="row">Triều Vĩ</th>
+                                <th>Triều Vĩ</th>
                                 <td>JOB</td>
                                 <td>SNACK</td>
-                                <td>HOMETOWN</td>
+                                <td>Cần Thơ</td>
                             </tr>
                         </tbody>  
                     </table>

@@ -191,7 +191,39 @@ main .team-intro-section {
 }
 
 /* --------------------- 4. FUN FACTS TABLE --------------------- */
+.facts-table-container {
+    max-width: 100%;
+    border: 1px solid var(--border-color);
+}
 
+.facts-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.facts-table thead {
+    padding: 20px;
+    color: var(--white-color);
+    background-color: var(--navy-color);
+}
+
+.facts-table th, td {
+    padding: 20px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.facts-table thead th {
+    font-size: 1.2rem;
+}
+
+.facts-table tbody th, td {
+    font-size: 1.1rem;
+}
+
+.facts-table tbody tr:hover {
+    background-color: #f2f4f7;
+}
 
 
 
