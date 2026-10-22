@@ -22,7 +22,6 @@ Description: CSS file for About Page
 body {
     margin: 0;
     font-family: var(--main-font);
-    font-size: 1rem;
     line-height: 1.5;
     color: var(--text-color);
     background-color: var(--white-color);
@@ -33,31 +32,19 @@ main > section {
     padding: 60px 50px;
 }
 
-main h2 {
-    margin: 0 0 20px;
-    font-size: 1.875rem;
-    color: var(--primary-color);
-}
-
 main h3 {
     color: var(--navy-color);
     font-size: 1.25rem;
 }
-
-main p {
-    margin-top: 0;
-}
-
 /* --------------------- 1. INTRODUCTION AND NESTED LIST --------------------- */
 main .team-intro-section {
     display: block;
-    margin: 30px 3.6% 0;
     padding: 30px 50px 36px;
     border-radius: 25px;
 }
 
 .team-intro-section h1 {
-    margin: 10px 0 10px;;
+    margin: 10px 0 10px;
     color: var(--primary-color);
     font-size: 2.6rem;
     line-height: 1.3;
@@ -110,6 +97,12 @@ main .team-intro-section {
     margin-bottom: 35px;
 }
 
+.members-section h2 {
+    margin: 0 0 20px;
+    font-size: 1.875rem;
+    color: var(--primary-color);
+}
+
 /* Divided into 2 columns */
 .members-list {
     /* divided into 2 columns */
@@ -143,7 +136,8 @@ main .team-intro-section {
 }
 
 .member-profile h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    text-align: center;
 }
 
 .member-profile dd {
@@ -176,21 +170,23 @@ main .team-intro-section {
     border-left: 4px solid var(--primary-color);
 }
 
-.member-quote blockquote {
-    margin: 0;
+.member-quote .vietnamese-quote {
     color: var(--navy-color);
+    font-size: 1.2rem;
     font-style: italic;
 }
 
-.member-quote blockquote p {
-    font-size: 1.25rem;
+.member-quote .eng-quote {
+    margin-top: 20px;
+    font-size: 0.9rem;
 }
 
-.member-quote > p {
-    font-size: 0.875rem;
+/* --------------------- 4. FUN FACTS TABLE (including: styled table with hex colours and hover effects --------------------- */
+.facts-section h2 {
+    margin: 0 0 20px;
+    font-size: 1.875rem;
+    color: var(--primary-color);
 }
-
-/* --------------------- 4. FUN FACTS TABLE --------------------- */
 .facts-table-container {
     max-width: 100%;
     border: 1px solid var(--border-color);
@@ -224,6 +220,34 @@ main .team-intro-section {
 .facts-table tbody tr:hover {
     background-color: #f2f4f7;
 }
+
+/* --------------------- 4. ACKNOWLEDGEMENT OF COUNTRY --------------------- */
+.country-acknowledgement-section {
+    background-color: var(--navy-color);
+    color: var(--white-color);
+}
+
+.country-acknowledgement-content {
+    width: 100%;
+}
+
+.country-acknowledgement-content h2 {
+    margin: 0 0 20px;
+    font-size: 1.875rem;
+    color: var(--white-color)
+}
+
+.country-acknowledgement-content h3 {
+    color: var(--white-color);
+    font-size: 1.25rem;
+    border-top: 1px solid var(--white-color);
+    margin: 40px 0 15px;
+    padding-top: 20px;
+}
+
+
+
+
 
 
 
