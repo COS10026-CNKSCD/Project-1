@@ -97,3 +97,117 @@ section h2{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CÁCH APPLY */
+.apply {
+    background-color: #F0EFF4;
+    border: 1px solid #D8DCE6;
+    border-radius: 24px;
+    padding: 20px 30px;
+    margin: 60px;
+}
+
+.apply .ready-to-impact {
+    font-size: 1rem;
+}
+
+.apply h2 {
+    font-size: 2rem;
+    margin: 0 0 20px;
+    color: #006199;
+}
+
+.apply > p {
+    margin-bottom: 20px;
+}
+
+.review-positions {
+    display: inline-block;
+    background-color: #006199;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 24px;
+}
+
+.review-positions:hover {
+    background-color: #293650;
+}
+
+.apply li {
+    margin: 15px 10px 15px 0;
+}
+
