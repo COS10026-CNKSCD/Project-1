@@ -1,3 +1,11 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* font: "Trebuchet MS", sans-serif;
+   Hình vuông: #F0EFF4, #293650,
+   chữ : đen, #006199 
+   */
+
 /* =========================
     HEADER / NAVIGATION 
 =========================*/
