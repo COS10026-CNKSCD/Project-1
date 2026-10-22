@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobs website</title>
+    <title>Document</title>
+    
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!--đặt logo công ty-->
-    <nav>
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+
+    <section class="hero">
+        
+        <!-- Header navigation bar -->
+        <nav>
              <!-- Company logo and main navigation links -->
              <div class="nav-left">
 
                 <!-- Company Logo - return the user to the Home page -->
                 <a href="index.html" class="logo">
-                    <img src="images/logo.jpg" alt="Company Logo" width="25%">
+                    <img src="" alt="">
                 </a>
 
                 <!-- Navigation links to the main website pages -->
@@ -25,7 +35,23 @@
                  </div>
 
              </div>
-    </nav>
+
+             <!-- Search form for entering job titles or keywords -->
+             <form class="search_form" action="jobs.html" method="get">
+                <input
+                    type="search"
+                    name="keyword"
+                    placeholder="Search jobs or keywords..."
+                    aria-label="Search jobs or keywords">
+
+                <!-- Search button for the search form -->
+                <button type="submit">Search</button>
+             </form>
+
+        </nav>
+
+
+
     <!--phần chào đầu-->
     <section>
         <p>BUILD A GREENER FUTURE</p>
