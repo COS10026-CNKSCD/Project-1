@@ -1,0 +1,99 @@
+/*thiết kế chung*/
+*{
+    font-family:"lato", sans-serif;
+    letter-spacing: 0.05px;
+}
+body{
+    margin: 5em;
+}
+/*chỉnh nav cho cao hơn so với cái gốc ở style*/
+.hero nav {
+    margin: 0.5em;
+    transform: translateY(-50px);
+}
+
+
+/*design introduction box*/
+.introduction {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:rgb(225, 240, 245);
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    margin: 0.5em auto;
+    border:0.1em solid rgb(31, 137, 230);
+    width:85%;
+}
+.introduction p:first-of-type{
+    color:#006199;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.introduction h1{
+    font-family: 'Inter', sans-serif;
+}
+section h2{
+    color:#006199;
+}
+
+/* thiết kế cho box chứa nội dung WHY JOIN US? */
+.join-us {
+    background-color:rgb(225, 240, 245);
+    border:0.1em solid rgb(31, 137, 230);
+    margin: 2em auto;
+    padding: 30px;
+    border-radius: 10px;
+    width:85%;
+    line-height: 1.5;
+}
+/*bỏ cái 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
