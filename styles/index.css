@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 /*
-Name: Tran Hong Vy Ai
+Name: Trần Hồng Vy Ái
 Student ID: 106391519
 File: home.css
 Purpose: Styles for the C-Group home page.
@@ -42,7 +42,7 @@ Purpose: Styles for the C-Group home page.
     position: absolute;
     left: 7%;
     bottom: 60px;
-    z-index: 1;
+    z-index: 1;  /* để chồng lên */
 }
 
 /* =========================
