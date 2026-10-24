@@ -215,7 +215,7 @@ main h3 {
     background-color: #f2f4f7;
 }
 
-/* --------------------- 4. ACKNOWLEDGEMENT OF COUNTRY --------------------- */
+/* --------------------- 5. ACKNOWLEDGEMENT OF COUNTRY --------------------- */
 .country-acknowledgement-section {
     background-color: var(--navy-color);
     color: var(--white-color);
@@ -237,6 +237,10 @@ main h3 {
     border-top: 1px solid var(--white-color);
     margin: 40px 0 15px;
     padding-top: 20px;
+}
+
+.country-acknowledgement-content p {
+    width: 60%;
 }
 
 
