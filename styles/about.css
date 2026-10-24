@@ -29,7 +29,7 @@ body {
 
 /* Used to select <section> tags that are direct children of <main> */
 main > section {
-    padding: 60px 50px;
+    padding: 40px 50px;
 }
 
 main h3 {
@@ -80,6 +80,21 @@ main h3 {
 
 .group-info li::marker {
     color: var(--primary-color);
+}
+
+/* Group photo */
+.group-photo {
+    width: 80%;
+    border: 2px solid var(--navy-color);
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 10px;
+}
+
+.group-photo img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* --------------------- 3. TEAM MEMBER QUOTE + DEFINITION LIST --------------------- */
