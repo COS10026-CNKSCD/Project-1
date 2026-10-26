@@ -1,26 +1,36 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-}
 /*
 Name: Trần Hồng Vy Ái
 Student ID: 106391519
 File: home.css
 Purpose: Styles for the C-Group home page.
+ 
+Sections in this file (same order as the page):
+  1. Hero banner image
+  2. Hero content + call-to-action button
+  3. Introduction (text + statistics + feature cards)
+  4. Projects
+  5. Latest news
 */
 
-/* =========================
-   HERO BANNER IMAGE
-========================= */
+/* * Make width and height include padding and border (easier to size boxes) */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
-/* Set the size and rounded corners of the banner */
+
+/* =========================================================
+   1. HERO BANNER IMAGE
+   ========================================================= */
+ 
+/* Banner frame: size, side margin and rounded corners */
 .hero-image {
     margin: 0 3.6%;
     height: 540px;
     border-radius: 32px;
-    overflow: hidden;
+    overflow: hidden;             /* cuts the image at the rounded corners */
 }
 
-/* Make the image fill the banner without distortion */
+/* Image fills the banner without being stretched */
 .hero-image img {
     width: 100%;
     height: 100%;
@@ -28,28 +38,27 @@ Purpose: Styles for the C-Group home page.
     display: block;
 }
 
-/* =========================
-   HERO CONTENT
-========================= */
 
-/* Establish the positioning reference for hero content */
+/* =========================================================
+   2. HERO CONTENT
+   ========================================================= */
+ 
+/* Reference point: hero content is positioned relative to this section */
 .hero {
     position: relative;
 }
 
-/* Position the hero content over the banner image */
+/* Hero text and button sit on top of the banner image */
 .hero-content {
     position: absolute;
     left: 7%;
     bottom: 60px;
-    z-index: 1;  /* để chồng lên */
+    z-index: 1;                 /* places the content on top of the image */
 }
 
-/* =========================
-   CALL-TO-ACTION BUTTON
-========================= */
-
-/* Style the Explore Careers button */
+/* ---------- Call-to-action button ---------- */
+ 
+/* "Explore Careers" button */
 .btn-primary {
     display: inline-block;
     background-color: #006199;
@@ -59,33 +68,35 @@ Purpose: Styles for the C-Group home page.
     border-radius: 30px;
     font-family: "Trebuchet MS", sans-serif;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;       /* smooth color change on hover */
 }
 
-/* Darken the button when hovered */
+/* Button becomes darker when the mouse is over it */
 .btn-primary:hover {
     background-color: #003B5C;
 }
-/*---------------------------------------------------------*/
 
-/* =========================
-   INTRODUCTION
-========================= */
 
+/* =========================================================
+   3. INTRODUCTION
+   ========================================================= */
+ 
 /* Two-column layout: intro text on the left, feature cards on the right */
 .intro-section {
     display: flex;
-    justify-content: space-between; /* Put the text and cards at opposite sides */
-    align-items: center;            /* Vertically align both sides */
-    padding: 60px 3.6%;             /* Side padding matches the hero image margin */
-    gap: 40px;                      /* Space between the text and the cards */
+    justify-content: space-between;       /* text and cards go to opposite sides */
+    align-items: center;                  /* centers both columns vertically */
+    padding: 60px 3.6%;                   /* side padding matches the hero image margin */
+    gap: 40px;                            /* space between the text and the cards */
 }
 
-/* Left column: introduction text */
+/* ---------- 3a. Left column: introduction text ---------- */
+
+/* Text column takes all the remaining space */
 .intro {
-    flex: 1;                        /* Take up all remaining space */
-    min-width: 0;                   /* Allow the text to shrink instead of pushing the cards out */
-    align-self: flex-start;         /* Align the text section to the top */
+    flex: 1;                        
+    min-width: 0;                        /* lets the text shrink instead of pushing the cards out */
+    align-self: flex-start;              /* aligns this column to the top */
 }
 
 /* Introduction heading */
@@ -104,24 +115,74 @@ Purpose: Styles for the C-Group home page.
     color: black;
 }
 
-/* =========================
-   FEATURES
-========================= */
+/* ---------- 3b. Company statistics (inside the left column) ---------- */
+ 
+/* Puts the 3 statistics items in a horizontal row */
+.company-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 40px;
+}
 
-/* Right column: fixed-width container holding the three cards */
+/* One statistics item (icon + number + description) */
+.stat-item {
+    flex: 1;                        /* all 3 items have equal width */
+    min-width: 0;
+    text-align: center;
+}
+
+/* Box that centers the icon and controls the space around it */
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin: 60px auto 2px;        /* top 60px, centered horizontally, bottom 2px */
+}
+
+/* Icon image size */
+.stat-icon img {
+    display: block;
+    width: 45px;
+    height: 45px;
+    object-fit: contain;         /* shows the whole icon without cropping */
+}
+
+/* Statistics value (e.g. 500 MW) */
+.stat-item h4 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 21px;
+    color: #006199;
+    margin: 0 0 10px;
+}
+
+/* Description under the value */
+.stat-item p {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444444;
+    margin: 0;
+}
+
+/* ---------- 3c. Right column: feature cards ---------- */
+
+/* Fixed-width column that holds the 3 cards */
 .features-section {
     flex: 0 0 520px;                /* Do not grow or shrink; width is 520px */
     max-width: 100%;                /* Never exceed the width of the parent */
 }
 
-/* Stack the cards vertically */
+/* Stacks the cards vertically */
 .features {
     display: flex;
     flex-direction: column;
     gap: 20px;                      /* Space between cards */
 }
 
-/* Individual feature card */
+/* One feature card */
 .feature-card {
     background-color: #8D9BB5;
     border-radius: 20px;
@@ -146,66 +207,12 @@ Purpose: Styles for the C-Group home page.
     margin: 0;
 }
 
-/* =========================
-   COMPANY STATISTICS
-========================= */
 
-/* Arrange the statistics items in a horizontal row */
-.company-stats {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    margin-top: 40px;
-}
-
-/* Style each statistics item */
-.stat-item {
-    flex: 1;
-    min-width: 0;
-    text-align: center;
-}
-
-/* Centre the icon and control its spacing */
-.stat-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 72px;
-    height: 72px;
-    margin: 60px auto 2px;
-}
-
-/* Style the statistics values */
-.stat-item h4 {
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 21px;
-    color: #006199;
-    margin: 0 0 10px;
-}
-
-/* Style the descriptions below the values */
-.stat-item p {
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #444444;
-    margin: 0;
-}
-
-/* Set the size and fit of the icon images */
-.stat-icon img {
-    display: block;
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-}
-/*---------------------------------------------------------*/
-
-/* =========================
-   PROJECTS
-========================= */
-
-/* Style the main projects section */
+/* =========================================================
+   4. PROJECTS
+   ========================================================= */
+ 
+/* Grey rounded box that holds the whole projects section */
 .intro-project {
     background-color: #F0EFF4;
     border-radius: 28px;
@@ -213,12 +220,14 @@ Purpose: Styles for the C-Group home page.
     margin: 50px 3.6%;
 }
 
-/* Style the introduction text above the project cards */
+/* ---------- 4a. Text above the project cards ---------- */
+
+/* Space between the text and the cards below */
 .project-text {
     margin-bottom: 10px;
 }
 
-/* Style the projects heading */
+/* Projects heading */
 .project-text h2 {
     font-family: "Trebuchet MS", sans-serif;
     font-size: 30px;
@@ -226,7 +235,7 @@ Purpose: Styles for the C-Group home page.
     margin: 0 0 16px;
 }
 
-/* Style the projects description */
+/* Projects description */
 .project-text p {
     font-family: "Trebuchet MS", sans-serif;
     font-size: 16px;
@@ -235,25 +244,27 @@ Purpose: Styles for the C-Group home page.
     margin: 0;
 }
 
-/* Arrange the project cards in a horizontal row */
+/* ---------- 4b. Project cards ---------- */
+ 
+/* Puts the project cards in a horizontal row */
 .projects {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
 
-/* Style each project card */
+/* One project card */
 .project-card {
-    flex: 1;
+    flex: 1;                        /* all cards have equal width */
     min-width: 0;
     height: 300px;
-    position: relative;
-    overflow: hidden;
+    position: relative;             /* lets the title and text be placed inside the card */
+    overflow: hidden;               /* cuts the image at the rounded corners */
     border-radius: 24px;
     box-sizing: border-box;
 }
 
-/* Make project images fill their cards */
+/* Image fills the whole card */
 .project-card img {
     width: 100%;
     height: 100%;
@@ -261,7 +272,7 @@ Purpose: Styles for the C-Group home page.
     display: block;
 }
 
-/* Position the project titles and descriptions over the images */
+/* Title and description sit on top of the image (shared settings) */
 .project-card h3,
 .project-card p {
     position: absolute;
@@ -270,7 +281,7 @@ Purpose: Styles for the C-Group home page.
     color: white;
 }
 
-/* Style the project titles near the bottom of the images */
+/* Project title: placed above the description */
 .project-card h3 {
     bottom: 55px;
     font-family: "Trebuchet MS", sans-serif;
@@ -278,11 +289,137 @@ Purpose: Styles for the C-Group home page.
     margin: 0;
 }
 
-/* Style the project descriptions at the bottom of the images */
+/* Project description: placed at the very bottom */
 .project-card p {
     bottom: 24px;
     font-family: "Trebuchet MS", sans-serif;
     font-size: 14px;
     line-height: 1.6;
+    margin: 0;
+}
+
+
+/* =========================================================
+   LATEST NEWS
+   ========================================================= */
+
+/* ---------- 1. Section wrapper ---------- */
+
+/* Outer space around the whole news section */
+.news-section {
+    margin: 50px 3.6%;
+    padding: 60px 0;
+}
+
+
+/* ---------- 2. Introduction text (title + description) ---------- */
+
+/* Space between the intro text and the news grid below */
+.news-text {
+    margin-bottom: 30px;
+}
+
+.news-text h2 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 30px;
+    color: black;
+    margin: 0 0 16px;
+}
+
+.news-text > p {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: black;
+    margin: 0;
+}
+
+
+/* ---------- 3. News grid layout (float) ----------
+   Layout: 1 big card on the left, 2 stacked cards on the right.
+   Widths:  59% + 39% = 98%  (the remaining 2% is the gap in the middle)
+   Heights: 48% + 4% + 48% = 100% (the 4% is the gap between the 2 right cards)
+   ---------------------------------------------------------- */
+
+/* Container: needs a fixed height so the % heights inside can be calculated */
+.news-grid {
+    height: 350px;
+    overflow: hidden;       /* clearfix: makes the container wrap its floated children */
+}
+
+/* Left column: the main (big) article */
+.news-main {
+    float: left;
+    width: 59%;
+    height: 100%;
+}
+
+/* Right column: wrapper that holds the 2 smaller articles */
+.news-right {
+    float: right;
+    width: 39%;
+    height: 100%;
+}
+
+/* Each small article takes 48% of the right column's height */
+.news-secondary {
+    height: 48%;
+}
+
+/* Gap between the two small articles (only the second one gets the margin) */
+.news-secondary + .news-secondary {
+    margin-top: 4%;
+}
+
+
+/* ---------- 4. News card (shared by all 3 articles) ---------- */
+
+/* Card frame: rounded corners, grey background shown while the image is empty */
+.news-card {
+    position: relative;     /* lets .news-content be positioned inside the card */
+    overflow: hidden;       /* hides anything outside the rounded corners */
+    border-radius: 8px;
+    background: #555;
+}
+
+/* Image fills the whole card without being stretched */
+.news-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* crops the image to fit instead of distorting it */
+    display: block;         /* removes the small gap under images */
+}
+
+
+/* ---------- 5. Text on top of the card image ---------- */
+
+/* Text block sits at the bottom of the card, over the image */
+.news-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /* padding stays inside the 100% width */
+    padding: 20px;
+    color: white;
+}
+
+/* Small category label (e.g. SOLAR ENERGY) */
+.news-content .news-category {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 0 0 8px;
+}
+
+/* Article title */
+.news-content h3 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+/* Short description (only the main article has one) */
+.news-content p {
     margin: 0;
 }
