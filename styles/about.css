@@ -88,19 +88,92 @@ main h3 {
 }
 
 /* Group photo */
-.group-photo {
-    width: 100%;
-    border: 2px solid var(--navy-color);
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 10px;
+.photo-section {
+    border-top: 2px solid var(--navy-color);
+    /* border-bottom: 2px solid var(--navy-color); */
+}
+.group-story-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
 }
 
+/* LEFT COLUMN: GROUP STORY */
+.group-story {
+    text-align: left;
+}
+
+/* Group story paragraphs */
+.group-story > p {
+    margin: 0 0 15px;
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Quote text */
+.group-story blockquote p {
+    margin: 0;
+    color: var(--navy-color);
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Quote author */
+.group-story blockquote footer {
+    margin-top: 15px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Make the image fit its container */
 .group-photo img {
     display: block;
     width: 100%;
-    object-fit: cover;
+    height: auto;
+    border-radius: 8px;
 }
+
+/* Photo caption */
+.group-photo figcaption {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 0.875rem;
+}
+
+/* 
+.group-photo {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid var(--navy-color);
+    box-sizing: border-box;
+} */
+
+/* .group-photo img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+} */
+
+/* .group-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.group-photo figcaption {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-color);
+} */
 
 /* --------------------- 3. TEAM MEMBER QUOTE + DEFINITION LIST --------------------- */
 .members-section {
