@@ -87,19 +87,57 @@ main h3 {
     color: var(--primary-color);
 }
 
-/* Group photo */
-.group-photo {
-    width: 100%;
-    border: 2px solid var(--navy-color);
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 10px;
+/* --------------------- 2. Story + Group photo --------------------- */
+.photo-section {
+    border-top: 1px solid var(--navy-color);
+}
+.group-story-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+/* group story located in left column */
+.group-story {
+    text-align: left;
+}
+
+.group-story > p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.group-story blockquote p {
+    color: var(--navy-color);
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Quote author */
+.group-story blockquote footer {
+    margin-top: 15px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: right;
 }
 
 .group-photo img {
     display: block;
     width: 100%;
-    object-fit: cover;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Photo caption */
+.group-photo figcaption {
+    margin-top: 12px;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 0.875rem;
 }
 
 /* --------------------- 3. TEAM MEMBER QUOTE + DEFINITION LIST --------------------- */
