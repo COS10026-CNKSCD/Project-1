@@ -37,6 +37,9 @@ main h3 {
     font-size: 1.25rem;
 }
 /* --------------------- 1. INTRODUCTION AND NESTED LIST --------------------- */
+.team-intro-section {
+    text-align: center;
+}
 .team-intro-section h1 {
     margin: 10px 0 10px;
     color: var(--primary-color);
@@ -54,7 +57,9 @@ main h3 {
     /* The width fits the content inside */
     width: fit-content; 
     max-width: 100%;
-    margin: 0;
+    margin: 0 auto;
+    text-align: left;
+
     padding: 30px 42px 30px 48px;
     background-color: var(--white-color);
     border-left: 4px solid var(--primary-color);
@@ -84,7 +89,7 @@ main h3 {
 
 /* Group photo */
 .group-photo {
-    width: 80%;
+    width: 100%;
     border: 2px solid var(--navy-color);
     box-sizing: border-box;
     margin: 0px;
