@@ -87,10 +87,9 @@ main h3 {
     color: var(--primary-color);
 }
 
-/* Group photo */
+/* --------------------- 2. Story + Group photo --------------------- */
 .photo-section {
-    border-top: 2px solid var(--navy-color);
-    /* border-bottom: 2px solid var(--navy-color); */
+    border-top: 1px solid var(--navy-color);
 }
 .group-story-layout {
     display: grid;
@@ -99,22 +98,18 @@ main h3 {
     gap: 50px;
 }
 
-/* LEFT COLUMN: GROUP STORY */
+/* group story located in left column */
 .group-story {
     text-align: left;
 }
 
-/* Group story paragraphs */
 .group-story > p {
-    margin: 0 0 15px;
     color: var(--text-color);
     font-size: 1rem;
     line-height: 1.7;
 }
 
-/* Quote text */
 .group-story blockquote p {
-    margin: 0;
     color: var(--navy-color);
     font-size: 1.2rem;
     font-style: italic;
@@ -130,7 +125,6 @@ main h3 {
     text-align: right;
 }
 
-/* Make the image fit its container */
 .group-photo img {
     display: block;
     width: 100%;
@@ -145,35 +139,6 @@ main h3 {
     color: var(--text-color);
     font-size: 0.875rem;
 }
-
-/* 
-.group-photo {
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    padding: 30px;
-    border: 2px solid var(--navy-color);
-    box-sizing: border-box;
-} */
-
-/* .group-photo img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-} */
-
-/* .group-photo img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.group-photo figcaption {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 14px;
-    color: var(--text-color);
-} */
 
 /* --------------------- 3. TEAM MEMBER QUOTE + DEFINITION LIST --------------------- */
 .members-section {
