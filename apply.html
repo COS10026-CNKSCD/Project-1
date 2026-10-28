@@ -7,34 +7,37 @@
   <link rel="stylesheet" href="./styles/apply.css">
 </head>
 <body>  
-        <!-- Header navigation bar -->
+        <!-- ---------- Navigation bar ---------- -->
         <nav>
-             <!-- Company logo and main navigation links -->
-             <div class="nav-left">
+            <!-- Left side: logo and page links -->
+            <div class="nav-left">
 
-                <!-- Company Logo - return the user to the Home page -->
+                <!-- Company logo: clicking it returns to the Home page -->
+                <a href="index.html" class="logo">
+                    <img src="images/logo_.png" alt="company_logo">
+                </a>
 
-                <!-- Navigation links to the main website pages -->
-                 <div class="navigation_links">
+                <!-- Company logo: clicking it returns to the Home page -->
+                <div class="navigation_links">
                     <a href="index.html" class="active">Home</a>
                     <a href="jobs.html">Jobs</a>
                     <a href="apply.html">Apply</a>
                     <a href="about.html">About us</a>
-                 </div>
+                </div>
 
-             </div>
+            </div>
 
-             <!-- Search form for entering job titles or keywords -->
-             <form class="search_form" action="jobs.html" method="get">
+            <!-- Right side: search form for job titles or keywords -->
+            <form class="search_form" action="jobs.html" method="get">
                 <input
                     type="search"
                     name="keyword"
                     placeholder="Search jobs or keywords..."
                     aria-label="Search jobs or keywords">
 
-                <!-- Search button for the search form -->
+                <!-- Button that submits the search -->
                 <button type="submit">Search</button>
-             </form>
+            </form>
 
         </nav>
         
