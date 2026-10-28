@@ -48,12 +48,39 @@ Sections in this file (same order as the page):
     position: relative;
 }
 
-/* Hero text and button sit on top of the banner image */
-.hero-content {
+/* Đẩy phần chữ C-GROUP và miêu tả lên cao hơn tùy ý qua thuộc tính top */
+.hero-text {
     position: absolute;
-    left: 7%;
-    bottom: 60px;
-    z-index: 1;                 /* places the content on top of the image */
+    left: 8%;
+    top: 45%;           /* Giảm hoặc tăng số này để chỉnh độ cao của chữ */
+    z-index: 2;
+    max-width: 650px;
+    color: #ffffff;     /* Chữ màu trắng nổi bật trên ảnh nền */
+}
+
+/* Giữ nguyên hoặc điều chỉnh vị trí nút bấm ở phía dưới */
+.hero-cta {
+    position: absolute;
+    left: 8%;
+    bottom: 60px;       /* Nút vẫn nằm ở vị trí cũ */
+    z-index: 2;
+}
+
+/* Tiêu đề C-GROUP */
+.hero-title h1 {
+    font-size: 90px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+/* Đoạn văn miêu tả */
+.hero-description p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    font-family: "Trebuchet MS", sans-serif;
 }
 
 /* ---------- Call-to-action button ---------- */
@@ -68,12 +95,13 @@ Sections in this file (same order as the page):
     border-radius: 30px;
     font-family: "Trebuchet MS", sans-serif;
     font-size: 16px;
-    transition: background-color 0.3s ease;       /* smooth color change on hover */
+    transition: 0.3s;       /* smooth color change on hover */
 }
 
 /* Button becomes darker when the mouse is over it */
 .btn-primary:hover {
     background-color: #003B5C;
+    transform: translateY(-3px);
 }
 
 
@@ -283,7 +311,7 @@ Sections in this file (same order as the page):
 
 /* Project title: placed above the description */
 .project-card h3 {
-    bottom: 55px;
+    bottom: 80px;
     font-family: "Trebuchet MS", sans-serif;
     font-size: 20px;
     margin: 0;
@@ -347,13 +375,6 @@ Sections in this file (same order as the page):
     overflow: hidden;       /* clearfix: makes the container wrap its floated children */
 }
 
-/* Left column: the main (big) article */
-.news-main {
-    float: left;
-    width: 59%;
-    height: 100%;
-}
-
 /* Right column: wrapper that holds the 2 smaller articles */
 .news-right {
     float: right;
@@ -361,14 +382,29 @@ Sections in this file (same order as the page):
     height: 100%;
 }
 
-/* Each small article takes 48% of the right column's height */
-.news-secondary {
-    height: 48%;
+/* The <a> tag around each card: must be a block so it can have width/height */
+.news-card-link {
+    display: block;
+    text-decoration: none;  /* removes the underline from the link */
+    color: inherit;         /* keeps the text color instead of link blue */
+}
+
+/* Left column: the main (big) article.
+   ">" selects only direct children of .news-grid, so the two small links are not affected */
+.news-grid > .news-card-link {
+    float: left;
+    width: 59%;
+    height: 100%;
+}
+
+/* Each small article: half of the column height, minus half of the 16px gap */
+.news-right .news-card-link {
+    height: calc((100% - 16px) / 2);
 }
 
 /* Gap between the two small articles (only the second one gets the margin) */
-.news-secondary + .news-secondary {
-    margin-top: 4%;
+.news-right .news-card-link + .news-card-link {
+    margin-top: 16px;
 }
 
 
@@ -380,6 +416,7 @@ Sections in this file (same order as the page):
     overflow: hidden;       /* hides anything outside the rounded corners */
     border-radius: 8px;
     background: #555;
+    height: 100%;           /* card fills the whole <a> tag around it */
 }
 
 /* Image fills the whole card without being stretched */
@@ -388,6 +425,12 @@ Sections in this file (same order as the page):
     height: 100%;
     object-fit: cover;      /* crops the image to fit instead of distorting it */
     display: block;         /* removes the small gap under images */
+    transition: transform 0.4s;   /* smooth zoom when hovering */
+}
+
+/* Hover: when the mouse is over the link, the image inside zooms in slightly */
+.news-card-link:hover .news-card img {
+    transform: scale(1.05);   /* 1.05 = 105% of the original size */
 }
 
 
@@ -401,6 +444,9 @@ Sections in this file (same order as the page):
     width: 100%;
     box-sizing: border-box; /* padding stays inside the 100% width */
     padding: 20px;
+    padding-top: 60px;      /* makes the box taller upward so the gradient has room */
+    /* Dark at the bottom (75%), fully transparent at the top: keeps white text readable */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
     color: white;
 }
 
