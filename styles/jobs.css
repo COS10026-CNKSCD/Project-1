@@ -1,8 +1,4 @@
 /*thiết kế chung*/
-*{
-    font-family:"lato", sans-serif;
-    letter-spacing: 0.05px;
-}
 body{
     margin: 5em;
 }
@@ -54,7 +50,30 @@ section h2{
     list-style-type: none;
     line-height: 2;
 }
+/* SCRUM-29: Aside floated right */
+.job_1 .job-details, .job_2 .job-details {
+    float: right;
+    width: 25%;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #F0EFF4;
+    box-sizing: border-box;
+}
 
+/* Chỉnh các div bên trong aside */
+.job_1 .job-details .detail-item, .job_2 .job-details .detail-item {
+    float: none;
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Ngăn nội dung sau Job 2 bị tràn */
+.job_1,.job_2 {
+    display: flow-root;
+}
 /*design cho box chứa nội dung JOB 1: FRONT-END WEB DEVELOPER */
 .job_1, .job_2 {
     background-color:rgb(249, 250, 251);
@@ -92,46 +111,17 @@ section h2{
     margin: 0 10px;
     transform: none;
 }
-
 /*chỉnh cái list trong job_1*/
 h4 + ul{
     list-style-type: none;
     line-height: 2;
 }
-/*chỉnh box cho salary, report, location*/
-aside div:first-of-type{
-    background-color:#F0EFF4;
-    border:0.1em solid;
-    margin: 2em auto;
-    padding: 0.2em 0.5em;
-    border-radius: 20px;
-    width:fit-content;
-    float:left;
-}
-
-aside div:nth-of-type(2){
-    background-color:#F0EFF4;
-    border:0.1em solid;
-    margin: 2em auto;
-    padding: 0.2em 0.5em;
-    border-radius: 20px;
-    width:fit-content;
-    float:left;
-}
-aside div:last-of-type{
-    background-color:#F0EFF4;
-    border:0.1em solid;
-    margin: 2em auto;
-    padding: 0.2em 0.5em;
-    border-radius: 20px;
-    width:fit-content;
-    float:left;
-}
 aside div:first-of-type,aside div:nth-of-type(2),aside div:last-of-type{
-    margin:10px;
-    width:25%;
-    margin-bottom:20px;
     text-align: center;
+    border:0.1em solid;
+    margin: 2em auto;
+    padding: 0.2em 0.5em;
+    border-radius: 20px;
 
 }
 h4,h4+ul{
