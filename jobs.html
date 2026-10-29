@@ -25,36 +25,37 @@
         <!-- <img class="logo" src="images/logo.jpg" alt="Company Logo"> -->
         
         <!-- Header navigation bar -->
+         <!-- ---------- Navigation bar ---------- -->
         <nav>
-             <!-- Company logo and main navigation links -->
-             <div class="nav-left">
+            <!-- Left side: logo and page links -->
+            <div class="nav-left">
 
-                <!-- Company Logo - return the user to the Home page -->
+                <!-- Company logo: clicking it returns to the Home page -->
                 <a href="index.html" class="logo">
-                    <img src="" alt="">
+                    <img src="images/logo_.png" alt="company_logo">
                 </a>
 
-                <!-- Navigation links to the main website pages -->
-                 <div class="navigation_links">
+                <!-- Company logo: clicking it returns to the Home page -->
+                <div class="navigation_links">
                     <a href="index.html" class="active">Home</a>
                     <a href="jobs.html">Jobs</a>
                     <a href="apply.html">Apply</a>
                     <a href="about.html">About us</a>
-                 </div>
+                </div>
 
-             </div>
+            </div>
 
-             <!-- Search form for entering job titles or keywords -->
-             <form class="search_form" action="jobs.html" method="get">
+            <!-- Right side: search form for job titles or keywords -->
+            <form class="search_form" action="jobs.html" method="get">
                 <input
                     type="search"
                     name="keyword"
                     placeholder="Search jobs or keywords..."
                     aria-label="Search jobs or keywords">
 
-                <!-- Search button for the search form -->
+                <!-- Button that submits the search -->
                 <button type="submit">Search</button>
-             </form>
+            </form>
 
         </nav>
 
@@ -279,5 +280,44 @@
         <li>Complete and submit your application.</li>
     </ol>
 </section>
+<!-- =====================================================
+         5. FOOTER
+ ===================================================== -->
+<footer class="footer">
+
+        <!-- Top part: 4 columns -->
+        <div class="footer-main">
+
+            <!-- Column 1: company introduction -->
+            <div class="footer-column">
+                <h3>G03 Clean Energy</h3>
+                <p>Delivering clean, safe and sustainable energy solutions for communities.</p>
+            </div>
+
+            <!-- Column 2: quick links to the main pages -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="apply.html">Apply</a>
+                <a href="about.html">About us</a>
+            </div>
+
+            <!-- Column 3: project links -->
+            <div class="footer-column">
+                <h3>Project Links</h3>
+                <a href="" target="_blank" rel="noopener">Jira Board</a>
+                <a href="" target="_blank" rel="noopener">GitHub Repository</a>
+            </div>
+
+            <!-- Column 4: contact information -->
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <a href="mailto:email@example.com">email@example.com</a>
+                <p>Phone: 0123 456 789</p>
+            </div>
+
+        </div>
+</footer>
 </body>
 </html>

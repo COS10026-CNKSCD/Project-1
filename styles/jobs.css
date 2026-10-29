@@ -1,16 +1,8 @@
-/*thiết kế chung*/
 body{
-    margin: 5em;
-}
-/*chỉnh nav cho cao hơn so với cái gốc ở style*/
-.hero nav {
-    margin: 0.5em;
-    transform: translateY(-50px);
+    margin: 0;
 }
 
-
-
-/*design introduction box*/
+/* Style the introduction box */
 .introduction {
     font-family:Arial, Helvetica, sans-serif;
     background-color:#F0EFF4;
@@ -35,7 +27,7 @@ section h2{
     margin-left:3em;
 }
 
-/* thiết kế cho box chứa nội dung WHY JOIN US? */
+/* Style the "WHY JOIN US?" section */
 .join-us {
     background-color:#F0EFF4;
     border:0.1em solid rgb(31, 137, 230);
@@ -45,7 +37,7 @@ section h2{
     width:85%;
     line-height: 1.5;
 }
-/*bỏ mấy cái dấu chấm của list*/
+/* Remove bullet points from the list */ 
 .join-us ul{
     list-style-type: none;
     line-height: 2;
@@ -62,7 +54,7 @@ section h2{
     box-sizing: border-box;
 }
 
-/* Chỉnh các div bên trong aside */
+/* Style the div elements inside the aside section */
 .job_1 .job-details .detail-item, .job_2 .job-details .detail-item {
     float: none;
     width: 100%;
@@ -70,11 +62,11 @@ section h2{
     box-sizing: border-box;
 }
 
-/* Ngăn nội dung sau Job 2 bị tràn */
+/* Prevent content after Job 2 from overflowing */
 .job_1,.job_2 {
     display: flow-root;
 }
-/*design cho box chứa nội dung JOB 1: FRONT-END WEB DEVELOPER */
+/* Style the boxes containing job descriptions */
 .job_1, .job_2 {
     background-color:rgb(249, 250, 251);
     border:0.1em solid rgb(31, 137, 230);
@@ -92,7 +84,6 @@ section h2{
     padding: 0.2em 0.5em;
     border-radius: 20px;
     width:fit-content;
-    transform:translateX(-450%);
     
 }
 .job-type{
@@ -102,16 +93,15 @@ section h2{
     padding: 0.2em 0.5em;
     border-radius: 20px;
     width:fit-content;
-    transform:translateX(-450%);   
 }
 
-/*chỉnh cho job-type với job-ref chung 1 dòng */
+/* Display job type and job reference on the same line */
 .job-type,.job-ref{
     display: inline-block;
     margin: 0 10px;
     transform: none;
 }
-/*chỉnh cái list trong job_1*/
+
 h4 + ul{
     list-style-type: none;
     line-height: 2;
@@ -127,7 +117,7 @@ aside div:first-of-type,aside div:nth-of-type(2),aside div:last-of-type{
 h4,h4+ul{
     clear:left;
 }
-/*chỉnh cái cuối cho job*/
+/* Style the job reference number and apply button */
 .ref_num{
     float: left;
 }
@@ -139,13 +129,13 @@ h4,h4+ul{
     width:fit-content;
     margin: 2em auto;
     padding: 0.5em 0.5em;
-    display: flex;   /* Cùng một hàng */
+    display: flex;   /* Use flexbox layout */
     float: right;
     text-decoration: none;
 }
 
 
-/* CÁCH APPLY */
+/* HOW TO APPLY SECTION */
 .apply {
     background-color: #F0EFF4;
     border: 1px solid #D8DCE6;
@@ -168,7 +158,7 @@ h4,h4+ul{
     margin-bottom: 20px;
 }
 
-/* Cuộn trang mượt mà */
+/* Enable smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
