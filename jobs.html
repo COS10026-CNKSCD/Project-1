@@ -8,8 +8,14 @@
     <!-- Main CSS file -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/jobs.css">
+    <!-- Embedded CSS -->
+    <style>
+        *{
+            font-family:"lato", sans-serif;
+            letter-spacing: 0.05px;
+        }
+    </style>
 </head>
-
 <body>
     <!-- =========================
          HEADER / NAVIGATION
@@ -19,40 +25,41 @@
         <!-- <img class="logo" src="images/logo.jpg" alt="Company Logo"> -->
         
         <!-- Header navigation bar -->
+         <!-- ---------- Navigation bar ---------- -->
         <nav>
-             <!-- Company logo and main navigation links -->
-             <div class="nav-left">
+            <!-- Left side: logo and page links -->
+            <div class="nav-left">
 
-                <!-- Company Logo - return the user to the Home page -->
+                <!-- Company logo: clicking it returns to the Home page -->
                 <a href="index.html" class="logo">
-                    <img src="" alt="">
+                    <img src="images/logo_.png" alt="company_logo">
                 </a>
 
-                <!-- Navigation links to the main website pages -->
-                 <div class="navigation_links">
+                <!-- Company logo: clicking it returns to the Home page -->
+                <div class="navigation_links">
                     <a href="index.html" class="active">Home</a>
                     <a href="jobs.html">Jobs</a>
                     <a href="apply.html">Apply</a>
                     <a href="about.html">About us</a>
-                 </div>
+                </div>
 
-             </div>
+            </div>
 
-             <!-- Search form for entering job titles or keywords -->
-             <form class="search_form" action="jobs.html" method="get">
+            <!-- Right side: search form for job titles or keywords -->
+            <form class="search_form" action="jobs.html" method="get">
                 <input
                     type="search"
                     name="keyword"
                     placeholder="Search jobs or keywords..."
                     aria-label="Search jobs or keywords">
 
-                <!-- Search button for the search form -->
+                <!-- Button that submits the search -->
                 <button type="submit">Search</button>
-             </form>
+            </form>
 
         </nav>
 
-
+    </section>
     <!--phần chào đầu-->
     <section class="introduction">
         <p>BUILD A GREENER FUTURE</p>
@@ -85,7 +92,7 @@
 </section>
         
 <!-- JOB 1: FRONT-END WEB DEVELOPER -->
-<section class="job_1">
+<section class="job_1" id="job1">
     <p class="job-ref"><strong>REF:</strong> SOL01</p> 
     <p class="job-type"><strong>FULL TIME</strong></p>
     <h3>Front-End Web Developer</h3>
@@ -171,10 +178,10 @@
 
 
 <!--CÁI JOB THỨ 2-->
-<section>
+<section class="job_2">
     <p class="job-ref"><strong>REF:</strong> SOL02</p> 
     <p class="job-type"><strong>FULL TIME</strong></p>
-    <h3>UX/UI & Accessibility Designer</h3>
+    <h3>Backend Developer</h3>
     <!-- Job Description -->
     <p>
         Design intuitive digital experiences that make sustainable energy information easier 
@@ -182,9 +189,25 @@
     </p>
 
     <!-- Salary/Location/Report to -->
-    <p><strong>Salary:</strong> AUD $90,000 - $110,000 per year</p>
-    <p><strong>Reports to:</strong> Digital Experience Lead</p>
-    <p><strong>Location:</strong> Melbourne, Australia</p>
+    <!-- Salary/Location/Report to -->
+    <aside class="job-details">
+
+        <div class="detail-item">
+            <p class="detail-label"><strong>Location</strong></p>
+            <p class="detail-value">Melbourne, Australia</p>
+        </div>
+
+        <div class="detail-item">
+            <p class="detail-label"><strong>Salary</strong></p>
+            <p class="detail-value">AUD $90,000 - $110,000 / yr</p>
+        </div>
+
+        <div class="detail-item">
+            <p class="detail-label"><strong>Reports to</strong></p>
+            <p class="detail-value">Digital Experience Lead</p>
+        </div>
+
+    </aside>
 
     <!-- Key Responsibilities -->
     <h4>Key Responsibilities</h4>
@@ -234,23 +257,67 @@
         </li>
     </ul>
 
-    <!-- Link to application form -->
-     <p>Reference number: SOL02</p>
-    <a href="apply.html">Apply Now</a>
+    <div class="apply-section">
+        <p class="ref_num">Reference number: SOL02</p>
+
+        <a href="apply.html" class="click_apply">
+            <strong>Apply Now →</strong>
+        </a>
+    </div>
+</section>
 
 <!--CÁCH APPLY-->
 <section class="apply">
     <p class="ready-to-impact">READY TO MAKE AN IMPACT?</p>
     <h2>How to Apply</h2>
     <p>We want to make your application process simple and straightforward.</p>
-    <p class="review-positions">Review Open Positions ↑</p>
-    <ul>
-        <li style="list-style-type: none">Choose a position that matches your skills.</li>
-        <li style="list-style-type: none">Review the job details and requirements.</li>
-        <li style="list-style-type: none">Open the application form on the Apply page.</li>
-        <li style="list-style-type: none">Enter your five-character job reference.</li>
-        <li style="list-style-type: none">Complete and submit your application.</li>
-    </ul>
+    <a href="#job1" class="review-positions">Review Open Positions ↑</a>
+    <ol>
+        <li>Choose a position that matches your skills.</li>
+        <li>Review the job details and requirements.</li>
+        <li>Open the application form on the Apply page.</li>
+        <li>Enter your five-character job reference.</li>
+        <li>Complete and submit your application.</li>
+    </ol>
 </section>
+<!-- =====================================================
+         5. FOOTER
+ ===================================================== -->
+<footer class="footer">
+
+        <!-- Top part: 4 columns -->
+        <div class="footer-main">
+
+            <!-- Column 1: company introduction -->
+            <div class="footer-column">
+                <h3>G03 Clean Energy</h3>
+                <p>Delivering clean, safe and sustainable energy solutions for communities.</p>
+            </div>
+
+            <!-- Column 2: quick links to the main pages -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="apply.html">Apply</a>
+                <a href="about.html">About us</a>
+            </div>
+
+            <!-- Column 3: project links -->
+            <div class="footer-column">
+                <h3>Project Links</h3>
+                <a href="" target="_blank" rel="noopener">Jira Board</a>
+                <a href="" target="_blank" rel="noopener">GitHub Repository</a>
+            </div>
+
+            <!-- Column 4: contact information -->
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <a href="mailto:email@example.com">email@example.com</a>
+                <p>Phone: 0123 456 789</p>
+            </div>
+
+        </div>
+</footer>
 </body>
 </html>
