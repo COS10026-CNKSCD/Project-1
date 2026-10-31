@@ -8,10 +8,8 @@ body{
     background-color:#F0EFF4;
     text-align: center;
     padding: 50px;
-    border-radius: 10px;
     margin: 0.1em auto;
-    border:0.1em solid rgb(31, 137, 230);
-    width:85%;
+    width:100%;
 }
 .introduction p:first-of-type{
     color:#006199;
@@ -26,16 +24,26 @@ section h2{
 .overview{
     margin-left:3em;
 }
-
-/* Style the "WHY JOIN US?" section */
 .join-us {
-    background-color:#F0EFF4;
-    border:0.1em solid rgb(31, 137, 230);
-    margin: 2em auto;
-    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 60px;
+}
+
+.join-us h2 {
+    font-size: 4em;
+    width: 30%;
+    text-align: center;
+}
+
+.content-join-us {
+    background-color: #F0EFF4;
+    padding: 20px 30px;
     border-radius: 10px;
-    width:85%;
+    width: 70%;
     line-height: 1.5;
+    font-size: 1em;
 }
 /* Remove bullet points from the list */ 
 .join-us ul{
@@ -50,7 +58,7 @@ section h2{
     padding: 15px;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: #F0EFF4;
+    background-color: #FFFFFF;
     box-sizing: border-box;
 }
 
@@ -62,23 +70,24 @@ section h2{
     box-sizing: border-box;
 }
 
-/* Prevent content after Job 2 from overflowing */
-.job_1,.job_2 {
+
+/* Make Job 1, Job 2 and Apply have the same box style */
+.job_1, .job_2, .apply {
+    background-color: #F0EFF4;
+    border: 1px solid #D8DCE6;
+    border-radius: 24px;
+    padding: 20px 30px;
+    padding-top: 2.5em;
+    margin: 60px;
+    clear: right;
+}
+
+/* Keep floated job details inside each job box */
+.job_1, .job_2 {
     display: flow-root;
 }
-/* Style the boxes containing job descriptions */
-.job_1, .job_2 {
-    background-color:rgb(249, 250, 251);
-    border:0.1em solid rgb(31, 137, 230);
-    margin: 2em auto;
-    padding: 25px;
-    padding-bottom: 80px;
-    border-radius: 10px;
-    width:85%;
-    line-height: 1.5;
-}
 .job-ref{
-    background-color:rgb(240, 237, 30);
+    background-color: #8ACFF8;
     border:0.1em solid;
     margin: 2em auto;
     padding: 0.2em 0.5em;
@@ -87,7 +96,7 @@ section h2{
     
 }
 .job-type{
-    background-color:rgb(102, 225, 247);
+    background-color:#b7ddf3;
     border:0.1em solid;
     margin: 2em auto;
     padding: 0.2em 0.5em;
@@ -112,6 +121,7 @@ aside div:first-of-type,aside div:nth-of-type(2),aside div:last-of-type{
     margin: 2em auto;
     padding: 0.2em 0.5em;
     border-radius: 20px;
+    background-color:#FFFFFF;
 
 }
 h4,h4+ul{
