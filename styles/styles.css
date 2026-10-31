@@ -16,10 +16,13 @@
     box-sizing: border-box;
 }
 
-
 /* =========================================================
    1. HEADER / NAVIGATION
    ========================================================= */
+/* Remove the default browser margin (8px) for consistent layout of the nav bar across all pages. */
+body {
+    margin: 0;
+}
 
 /* Navigation bar: logo and links on the left, search form on the right */
 nav {
