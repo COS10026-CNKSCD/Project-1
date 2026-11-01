@@ -55,7 +55,7 @@ Sections in this file (same order as the page):
     top: 45%;           /* Giảm hoặc tăng số này để chỉnh độ cao của chữ */
     z-index: 2;
     max-width: 650px;
-    color: #ffffff;     /* Chữ màu trắng nổi bật trên ảnh nền */
+    color: #ffffff;     /* Chữ màu trắng nổi bật trên ảnh nền */   
 }
 
 /* Giữ nguyên hoặc điều chỉnh vị trí nút bấm ở phía dưới */
@@ -73,6 +73,11 @@ Sections in this file (same order as the page):
     margin: 0 0 10px 0;
     letter-spacing: 2px;
     font-family: "Trebuchet MS", sans-serif;
+    /* Layered shadows: a tight dark edge + a soft wide glow behind the letters */
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.6),
+        0 4px 20px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Đoạn văn miêu tả */
@@ -81,6 +86,10 @@ Sections in this file (same order as the page):
     line-height: 1.5;
     margin: 0;
     font-family: "Trebuchet MS", sans-serif;
+    /* Same idea, a bit lighter because the text is smaller */
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.7),
+        0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 /* ---------- Call-to-action button ---------- */
@@ -212,7 +221,7 @@ Sections in this file (same order as the page):
 
 /* One feature card */
 .feature-card {
-    background-color: #8D9BB5;
+    background-color: #60739A;
     border-radius: 20px;
     padding: 24px;
     width: 100%;                    /* Fill the column width */
@@ -229,9 +238,9 @@ Sections in this file (same order as the page):
 /* Card text */
 .feature-card p {
     font-family: "Trebuchet MS", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6;
-    color: white;
+    color: White;
     margin: 0;
 }
 
@@ -290,6 +299,7 @@ Sections in this file (same order as the page):
     overflow: hidden;               /* cuts the image at the rounded corners */
     border-radius: 24px;
     box-sizing: border-box;
+    background-color: #222222;      /* dark fallback: used for contrast checking, and shown if the image fails to load */
 }
 
 /* Image fills the whole card */
@@ -298,6 +308,16 @@ Sections in this file (same order as the page):
     height: 100%;
     object-fit: cover;
     display: block;
+}
+.project-card::before {
+    content: "";            /* required, otherwise the box does not appear */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60%;            /* the gradient covers the bottom 60% of the card */
+    /* Dark at the bottom (75%), fully transparent at the top */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 /* Title and description sit on top of the image (shared settings) */
@@ -352,7 +372,7 @@ Sections in this file (same order as the page):
 /* Table cells */
 .solutions-table th,
 .solutions-table td {
-    border: 1px solid black;
+    border: 1px solid #D5D9E3;
     padding: 15px;
     text-align: left;
     line-height: 1.6;
@@ -368,8 +388,8 @@ Sections in this file (same order as the page):
 
 /* Column headings */
 .solutions-table tr:nth-child(2) th {
-    background-color: #8ACFF8;
-    color: #222222;
+    background-color: #E3E8F1;
+    color: #003B5C;
 }
 
 /* Table body */
@@ -380,7 +400,7 @@ Sections in this file (same order as the page):
 
 /* Highlight a row when the mouse moves over it */
 .solutions-table tr:hover td {
-    background-color: #f0f8fc;
+    background-color: #F0EFF4;
 }
 
 /* =========================================================
@@ -523,5 +543,44 @@ Sections in this file (same order as the page):
 
 /* Short description (only the main article has one) */
 .news-content p {
+    margin: 0;
+}
+
+/* =========================================================
+   ACKNOWLEDGEMENT OF COUNTRY
+   ========================================================= */
+
+/* Dark rounded box, same side margin and rounded corners as the other sections */
+.country-acknowledgement-section {
+    background-color: #003B5C;          /* brand dark blue (same as the button hover) */
+    color: #ffffff;
+    border-radius: 28px;                /* same as the projects box */
+    padding: 50px 40px;
+    margin: 50px 3.6%;                  /* side margin matches the hero image */
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+/* Two columns: heading + text on the left, heading + text on the right.
+   grid-auto-flow: column fills the first column (h2, p) before the second (h3, p) */
+.country-acknowledgement-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;       /* row 1 = headings, row 2 = paragraphs */
+    grid-auto-flow: column;
+    column-gap: 60px;
+}
+
+/* Both headings share the same size so the two columns line up */
+.country-acknowledgement-content h2,
+.country-acknowledgement-content h3 {
+    font-size: 30px;
+    color: #ffffff;
+    margin: 0 0 20px;
+}
+
+/* Paragraphs fill their own column */
+.country-acknowledgement-content p {
+    font-size: 16px;
+    line-height: 1.7;
     margin: 0;
 }
