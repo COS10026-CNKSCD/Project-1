@@ -5,6 +5,12 @@
   <title>Job Application Form</title>
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/apply.css">
+      <!-- Embedded CSS -->
+    <style>
+        * {
+            font-family: "Trebuchet MS", sans-serif;
+        }
+    </style>
 </head>
 <body>  
         <!-- ---------- Navigation bar ---------- -->
@@ -102,7 +108,7 @@
           <p>
             <label for="state">State:</label><br>
             <select name="state" id="state" required>
-              <option value="" disabled selected>Select State</option>
+              <option style="display:none" value="" disabled selected>Select State</option>
               <option value="VIC">VIC</option>
               <option value="NSW">NSW</option>
               <option value="QLD">QLD</option>
@@ -157,6 +163,7 @@
       </form>
 
     </section>
+
     <!-- =====================================================
          5. FOOTER
          ===================================================== -->
@@ -183,8 +190,8 @@
             <!-- Column 3: project links -->
             <div class="footer-column">
                 <h3>Project Links</h3>
-                <a href="" target="_blank" rel="noopener">Jira Board</a>
-                <a href="" target="_blank" rel="noopener">GitHub Repository</a>
+                <a href="https://student-team-bgzfvh3f.atlassian.net/jira/software/projects/SCRUM/boards/1?filter=&groupBy=subtask" target="_blank" rel="noopener">Jira Board</a>
+                <a href="https://github.com/COS10026-CNKSCD/Project-1" target="_blank" rel="noopener">GitHub Repository</a>
             </div>
 
             <!-- Column 4: contact information -->
