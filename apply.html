@@ -5,6 +5,12 @@
   <title>Job Application Form</title>
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/apply.css">
+      <!-- Embedded CSS -->
+    <style>
+        * {
+            font-family: "Trebuchet MS", sans-serif;
+        }
+    </style>
 </head>
 <body>  
         <!-- ---------- Navigation bar ---------- -->
@@ -102,7 +108,7 @@
           <p>
             <label for="state">State:</label><br>
             <select name="state" id="state" required>
-              <option value="" disabled selected>Select State</option>
+              <option style="display:none" value="" disabled selected>Select State</option>
               <option value="VIC">VIC</option>
               <option value="NSW">NSW</option>
               <option value="QLD">QLD</option>
