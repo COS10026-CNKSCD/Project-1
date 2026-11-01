@@ -24,32 +24,101 @@ section h2{
 .overview{
     margin-left:3em;
 }
+
+/* WHY JOIN US */
+
 .join-us {
-    display: flex;
-    align-items: center;
-    gap: 30px;
     margin: 60px;
+    display: flow-root;
 }
 
-.join-us h2 {
-    font-size: 3em;
-    width: 30%;
-    text-align: center;
+/* LEFT SIDE */
+.join-us-left {
+    float: left;
+    width: 38%;
+    box-sizing: border-box;
+    padding-right: 30px;
 }
 
-.content-join-us {
-    background-color: #F0EFF4;
-    padding: 20px 30px;
-    border-radius: 10px;
-    width: 70%;
-    line-height: 1.5;
+/* RIGHT SIDE */
+.join-us-right {
+    float: right;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+/* SAME HEADING STYLE */
+.join-us-left h2,
+.join-us-right h3 {
+    color: #006199;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.2;
+    margin: 0 0 30px 0;
+}
+
+/* LEFT CONTENT */
+.join-us-left p {
     font-size: 1em;
+    line-height: 1.7;
+    margin: 0 0 20px 0;
 }
-/* Remove bullet points from the list */ 
-.join-us ul{
+
+.join-us-left h3 {
+    font-size: 1.3em;
+    margin: 25px 0 15px;
+}
+
+/* OFFER LIST */
+.join-us-right ul {
     list-style-type: none;
-    line-height: 2;
+    padding: 0;
+    margin: 0;
 }
+
+/* FOUR OFFER BOXES */
+.join-us-right li {
+    float: left;
+    width: 48%;
+    margin: 0 2% 20px 0;
+    background-color: #F0EFF4;
+    border-radius: 25px;
+    height: 150px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+
+    /* Center text vertically without flex */
+    align-content: center;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .join-us {
+        margin: 30px 20px;
+    }
+
+    .join-us-left .join-us-right {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .join-us-right {
+        margin-top: 30px;
+    }
+    .join-us-right li {
+        float: none;
+        width: 100%;
+        margin-bottom: 15px;
+        height: auto;
+        min-height: 120px;
+    }
+}
+
 /* SCRUM-29: Aside floated right */
 .job_1 .job-details, .job_2 .job-details {
     float: right;
@@ -85,6 +154,7 @@ section h2{
 /* Keep floated job details inside each job box */
 .job_1, .job_2 {
     display: flow-root;
+    clear: left;
 }
 .job-ref{
     background-color: #8ACFF8;
