@@ -15,34 +15,39 @@ description: apply.css
    APPLICATION FORM STYLING (apply.css)
 ========================= */
 
+body {
+    margin: 0;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 30%, #dfeeff 55%, #a9c7ff 100%);
+}
+
 /* General container styling for the form section */
 .theme {
     font-family: "Trebuchet MS", sans-serif;
     font-size: 15px;
-    color: darkslategray;
+    color: #1f3b66;
     max-width: 750px;
     margin: 40px auto;
     padding: 30px;
-    background-color: white;
-    border: 1px solid gray;
+    background: linear-gradient(180deg, #ffffff 0%, #f4f9ff 25%, #dfeeff 100%);
+    border: 1px solid #a9c4ee;
     border-radius: 16px;
-    box-shadow: 0 4px 20px lightgray;
+    box-shadow: 0 4px 20px rgba(34, 67, 125, 0.12);
 }
 
 /* Main title styling */
 #applytitle {
     text-align: center;
-    color: darkslategray;
+    color: #1f3b66;
     margin-bottom: 24px;
 }
 
 /* General styling for fieldsets */
 .theme fieldset {
-    border: 1px solid silver;
+    border: 1px solid #a7c0ee;
     border-radius: 12px;
     padding: 24px;
     margin-bottom: 24px;
-    background-color: white;
+    background-color: #edf5ff;
 }
 
 /* Spacing for input rows/paragraphs */
@@ -58,12 +63,12 @@ description: apply.css
 .theme textarea {
     width: 100%;
     padding: 12px 14px;
-    border: 1px solid silver;
+    border: 1px solid #a8c4eb;
     border-radius: 8px;
     font-family: "Trebuchet MS", sans-serif;
     box-sizing: border-box;
-    background-color: white;
-    color: black;
+    background-color: #f7fbff;
+    color: #123a66;
     transition: all 0.3s ease;
 }
 
@@ -89,21 +94,21 @@ description: apply.css
 
 /* Submit button customization */
 .theme input[type="submit"] {
-    background-color: darkslategray;
+    background-color: #2f6fb3;
     color: white;
     margin-right: 12px;
 }
 
 .theme input[type="submit"]:hover {
-    background-color: midnightblue;
+    background-color: #234f8c;
 }
 
 /* Reset button customization */
 .theme input[type="reset"] {
-    background-color: lightgray;
-    color: dimgray;
+    background-color: #dfeaff;
+    color: #264d7a;
 }
 
 .theme input[type="reset"]:hover {
-    background-color: silver;
+    background-color: #cfe0ff;
 }
