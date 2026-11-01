@@ -111,3 +111,37 @@ body {
 .theme input[type="reset"]:hover {
     background-color: #cfe0ff;
 }
+
+/* --------------------- 5. ACKNOWLEDGEMENT OF COUNTRY --------------------- */
+.country-acknowledgement-section {
+    --navy-color: #293650;
+    --white-color: #FFFFFF;
+    background-color: var(--navy-color);
+    color: var(--white-color);
+    padding: 40px 50px;
+    line-height: 1.5;
+}
+
+.country-acknowledgement-content {
+    width: 100%;
+}
+
+.country-acknowledgement-content h2 {
+    margin: 0 0 20px;
+    font-size: 1.875rem;
+    color: var(--white-color);
+    line-height: 1.25;
+}
+
+.country-acknowledgement-content h3 {
+    color: var(--white-color);
+    font-size: 1.25rem;
+    border-top: 1px solid var(--white-color);
+    margin: 40px 0 15px;
+    padding-top: 20px;
+    line-height: 1.25;
+}
+
+.country-acknowledgement-content p {
+    width: 60%;
+}
