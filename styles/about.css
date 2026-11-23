@@ -200,6 +200,15 @@ main h3 {
     color: var(--navy-color);
 }
 
+/* Style member names without using heading elements */
+.member-profile .member-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #293650;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
 /* Highlight Student ID */
 .student-id {
     display: inline-block;
