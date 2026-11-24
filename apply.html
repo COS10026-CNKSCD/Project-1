@@ -137,7 +137,12 @@
 
           <p>
             <label for="phone">Phone Number:</label><br>
-            <input type="tel" name="phone" id="phone" required pattern="^[0-9\s\-]{8,12}$" placeholder="0412345678">
+            <input type="tel" name="phone" id="phone" 
+                   required pattern="[0-9]{8,12}"
+                   maxlength="12"
+                   placeholder="0412345678"
+                   inputmode="numeric"
+                   title="Please enter 8 to 12 digits without spaces or hyphens.">
           </p>
         </fieldset>
 
