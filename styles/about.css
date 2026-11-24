@@ -53,6 +53,7 @@ main h3 {
 .team-intro-text h1 {
     color: var(--primary-color);
     font-size: 4rem;
+    text-transform: uppercase;
 }
 
 .group-info {
@@ -100,6 +101,14 @@ main h3 {
 /* group story located in left column */
 .group-story {
     text-align: left;
+}
+
+/* Style the Our Story heading */
+.group-story h2 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 0;
 }
 
 .group-story > p {
@@ -198,6 +207,15 @@ main h3 {
 
 .member-profile dd strong {
     color: var(--navy-color);
+}
+
+/* Style member names without using heading elements */
+.member-profile .member-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #293650;
+    margin-top: 12px;
+    margin-bottom: 20px;
 }
 
 /* Highlight Student ID */
