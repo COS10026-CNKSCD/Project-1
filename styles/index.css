@@ -1,7 +1,7 @@
 /*
 Name: Trần Hồng Vy Ái
 Student ID: 106391519
-File: home.css
+File: index.css
 Purpose: Styles for the C-Group home page.
  
 Sections in this file (same order as the page):
@@ -11,12 +11,6 @@ Sections in this file (same order as the page):
   4. Projects
   5. Latest news
 */
-
-/* * Make width and height include padding and border (easier to size boxes) */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 
 /* =========================================================
    1. HERO BANNER IMAGE
@@ -80,6 +74,16 @@ Sections in this file (same order as the page):
         0 0 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Hero slogan */
+.hero-slogan p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 12px;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #ffffff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
 /* Đoạn văn miêu tả */
 .hero-description p {
     font-size: 16px;
@@ -113,6 +117,11 @@ Sections in this file (same order as the page):
     transform: translateY(-3px);
 }
 
+/* Focus when using keyboard on the main CTA button */
+.btn-primary:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
 
 /* =========================================================
    3. INTRODUCTION
@@ -188,7 +197,7 @@ Sections in this file (same order as the page):
 }
 
 /* Statistics value (e.g. 500 MW) */
-.stat-item h4 {
+.stat-item h3 {
     font-family: "Trebuchet MS", sans-serif;
     font-size: 21px;
     color: #006199;
@@ -378,16 +387,18 @@ Sections in this file (same order as the page):
     line-height: 1.6;
 }
 
-/* Main table heading */
-.solutions-table tr:first-child th {
+/* Main table title */
+.solutions-table caption {
     background-color: #006199;
     color: white;
     text-align: center;
     font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
 }
 
 /* Column headings */
-.solutions-table tr:nth-child(2) th {
+.solutions-table thead th {
     background-color: #E3E8F1;
     color: #003B5C;
 }
@@ -463,6 +474,13 @@ Sections in this file (same order as the page):
     display: block;
     text-decoration: none;  /* removes the underline from the link */
     color: inherit;         /* keeps the text color instead of link blue */
+}
+
+/* Focus when using keyboard on the news cards */
+.news-card-link:focus-visible {
+    outline: 3px solid #006199;
+    outline-offset: 3px;
+    border-radius: 8px;
 }
 
 /* Left column: the main (big) article.
@@ -545,3 +563,162 @@ Sections in this file (same order as the page):
 .news-content p {
     margin: 0;
 }
+/* =========================================================
+   HOME PAGE RESPONSIVE & LAYOUT OVERRIDES
+   ========================================================= */
+
+/* Adjust feature column width slightly on medium-large screens so text has room */
+@media screen and (max-width: 1200px) {
+    .features-section {
+        flex: 0 0 420px;
+    }
+}
+
+/* Stack two-column sections vertically on tablets and smaller screens */
+@media screen and (max-width: 900px) {
+    .hero-image {
+        height: 440px;
+        border-radius: 24px;
+    }
+
+    .hero-text {
+        padding-right: 16px;
+    }
+
+    .hero-title h1 {
+        font-size: 52px;
+    }
+
+    .hero-slogan p {
+        font-size: 20px;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 36px 20px;
+        gap: 24px;
+    }
+
+    .intro {
+        width: 100%;
+    }
+
+    .features-section {
+        flex: none;
+        width: 100%;
+    }
+
+    .company-stats {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    .stat-icon {
+        margin: 16px auto 4px;
+    }
+
+    .projects {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Fix news grid stacking & prevent text clipping/overlap on tablet/mobile */
+    .news-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        height: auto;
+        overflow: visible;
+    }
+
+    .news-grid > .news-card-link,
+    .news-right {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .news-right {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .news-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 220px;
+        height: auto;
+    }
+        .project-card {
+        flex: none;
+        height: 300px;
+    }
+
+    .news-right .news-card-link + .news-card-link {
+        margin-top: 0;
+    }
+
+    .news-card img {
+        height: 240px;
+    }
+}
+
+/* Mobile adjustments for small viewports (e.g. 375px / 390px) */
+@media screen and (max-width: 600px) {
+    .hero-image {
+        height: 420px;
+        border-radius: 18px;
+    }
+
+    .hero-text {
+        top: 20%;
+        left: 6%;
+        right: 6%;
+        max-width: none;
+    }
+
+    .hero-title h1 {
+        font-size: 42px;
+        letter-spacing: 1px;
+    }
+
+    .hero-slogan p {
+        font-size: 18px;
+    }
+
+    .hero-description p {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .hero-cta {
+        left: 6%;
+        bottom: 20px;
+    }
+
+    .btn-primary {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .intro-project {
+        padding: 24px 16px;
+        margin: 32px 3.6%;
+    }
+
+    .solutions-section,
+    .news-section {
+        margin: 32px 3.6%;
+        padding: 24px 0;
+    }
+
+    .solutions-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
