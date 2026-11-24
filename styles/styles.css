@@ -132,6 +132,7 @@ nav {
 }
 
 /* Column title */
+.footer-column h2, 
 .footer-column h3 {
     font-family: "Trebuchet MS", sans-serif;
     font-size: 18px;
