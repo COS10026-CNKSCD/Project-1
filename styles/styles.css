@@ -455,16 +455,26 @@ input:focus-visible {
     }
 }
 @media screen and (max-width: 600px) {
+
+    /* Navigation links */
     .navigation_links a {
         font-size: 14px;
         padding: 8px 12px;
     }
 
+    /* Search input */
     .search_form input[type="search"] {
-        font-size: 16px;   
+        font-size: 16px;
     }
 
+    /* Footer */
     .footer {
-        margin: 32px 3.6%;
+        margin: 32px 16px;
+    }
+
+    /* Prevent footer text from overflowing */
+    .footer-column {
+        min-width: 0;
+        overflow-wrap: break-word;
     }
 }

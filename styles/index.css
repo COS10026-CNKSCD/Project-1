@@ -563,162 +563,183 @@ Sections in this file (same order as the page):
 .news-content p {
     margin: 0;
 }
+
+
 /* =========================================================
-   HOME PAGE RESPONSIVE & LAYOUT OVERRIDES
+   RESPONSIVE DESIGN - HOME PAGE
    ========================================================= */
 
-/* Adjust feature column width slightly on medium-large screens so text has room */
-@media screen and (max-width: 1200px) {
-    .features-section {
-        flex: 0 0 420px;
-    }
-}
+@media screen and (max-width: 768px) {
 
-/* Stack two-column sections vertically on tablets and smaller screens */
-@media screen and (max-width: 900px) {
-    .hero-image {
-        height: 440px;
-        border-radius: 24px;
-    }
-
-    .hero-text {
-        padding-right: 16px;
-    }
-
-    .hero-title h1 {
-        font-size: 52px;
-    }
-
-    .hero-slogan p {
-        font-size: 20px;
-    }
-
+    /* 1. Introduction: change two columns to one */
     .intro-section {
+        display: flex;
         flex-direction: column;
         align-items: stretch;
-        padding: 36px 20px;
-        gap: 24px;
+        gap: 32px;
+        padding: 32px 16px;
     }
 
-    .intro {
-        width: 100%;
-    }
-
+    .intro,
     .features-section {
-        flex: none;
         width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        flex: none;
+        margin: 0;
     }
 
+    .intro h2,
+    .intro p {
+        max-width: 100%;
+    }
+
+    /* 2. Statistics: stack the three items vertically */
     .company-stats {
-        flex-direction: column;
-        gap: 16px;
-        margin-top: 24px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .stat-icon {
-        margin: 16px auto 4px;
+    .stat-item {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        text-align: center;
     }
 
-    .projects {
-        flex-direction: column;
+    .stat-item h4,
+    .stat-item p {
+        width: auto;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        overflow-wrap: normal;
+    }
+
+    .stat-icon img {
+        max-width: 48px;
+        height: auto;
+    }
+
+    /* 3. Feature cards */
+    .features {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
         gap: 20px;
     }
 
-    /* Fix news grid stacking & prevent text clipping/overlap on tablet/mobile */
-    .news-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        height: auto;
-        overflow: visible;
-    }
-
-    .news-grid > .news-card-link,
-    .news-right {
-        float: none;
+    .feature-card {
         width: 100%;
-        height: auto;
-        margin-top: 0;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
     }
 
+    /* 4. Project cards */
+    .intro-project {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 32px 16px;
+    }
+
+    .featured-projects,
+    .projects {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .project-card {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 340px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .project-card h3 {
+        font-size: 24px;
+        max-width: 100%;
+    }
+
+    .project-card p {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    /* 5. Latest News */
+    .news-section {
+        padding: 32px 16px;
+        box-sizing: border-box;
+    }
+
+    .news-grid,
     .news-right {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .news-card-link {
+        display: block;
+        width: 100%;
+        min-width: 0;
     }
 
     .news-card {
         position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
         overflow: hidden;
-        min-height: 220px;
-        height: auto;
-    }
-        .project-card {
-        flex: none;
-        height: 300px;
     }
 
-    .news-right .news-card-link + .news-card-link {
-        margin-top: 0;
+    .news-main {
+        height: 380px;
     }
+
+    .news-secondary {
+        height: 280px;
+}
 
     .news-card img {
-        height: 240px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .news-content {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .news-content h3 {
+        font-size: 22px;
+    }
+
+    .news-content p {
+        font-size: 15px;
     }
 }
-
-/* Mobile adjustments for small viewports (e.g. 375px / 390px) */
-@media screen and (max-width: 600px) {
-    .hero-image {
-        height: 420px;
-        border-radius: 18px;
-    }
-
-    .hero-text {
-        top: 20%;
-        left: 6%;
-        right: 6%;
-        max-width: none;
-    }
-
-    .hero-title h1 {
-        font-size: 42px;
-        letter-spacing: 1px;
-    }
-
-    .hero-slogan p {
-        font-size: 18px;
-    }
-
-    .hero-description p {
-        font-size: 14px;
-        line-height: 1.45;
-    }
-
-    .hero-cta {
-        left: 6%;
-        bottom: 20px;
-    }
-
-    .btn-primary {
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-
-    .intro-project {
-        padding: 24px 16px;
-        margin: 32px 3.6%;
-    }
-
-    .solutions-section,
-    .news-section {
-        margin: 32px 3.6%;
-        padding: 24px 0;
-    }
-
-    .solutions-table {
-        display: block;
-        overflow-x: auto;
-    }
-}
-
