@@ -49,6 +49,25 @@ body {
     background-color: #edf5ff;
 }
 
+
+/* Privacy Notice */
+.privacy-notice {
+    background-color: #F0EFF4;
+    border-left: 4px solid #006199;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.privacy-notice p {
+    margin: 0 0 12px;
+}
+
+.privacy-notice p:last-child {
+    margin-bottom: 0;
+}
+
 /* Spacing for input rows/paragraphs */
 .theme p {
     margin-bottom: 16px;

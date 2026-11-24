@@ -58,6 +58,16 @@
       <h1 id="applytitle">Job Application Form</h1>
       
       <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+
+        <!-- Privacy notice: explaining why or how the data will be used (DOB, gender, home address, phone) -->
+        <div class="privacy-notice">
+          <p><strong>Privacy Notice</strong></p>
+          <p>This form is part of a university web development project and is used for testing purposes only.</p>
+
+          <p>Your name, date of birth, gender, address, contact details, and skills are asked to demonstrate how a job application form collects and validates information.</p>
+          <p>When submitted, the information is sent to form testing service. However it is not used for real recruitment.</p>
+        </div>
+        
         <!-- 1. Position Vacancy -->
         <fieldset>
           <legend>Position Vacancy</legend>
@@ -92,7 +102,7 @@
             <label><input type="radio" name="gender" value="male" required> Male</label><br>
             <label><input type="radio" name="gender" value="female" required> Female</label><br>
             <label><input type="radio" name="gender" value="nonbinary" required> Non-binary</label><br>
-            <label><input type="radio" name="gender" value="other" required> Prefer not to say</label>
+            <label><input type="radio" name="gender" value="prefer_noy_to_say" required> Prefer not to say</label>
           </fieldset>
         </fieldset>
 
