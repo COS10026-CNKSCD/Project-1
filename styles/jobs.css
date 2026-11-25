@@ -1,10 +1,24 @@
+/*
+Filename: jobs.css
+Author: Tran Bao Ngoc
+Last modified: 25/11/2026
+Description: Styles for the Jobs page of G03 Clean Energy.
+
+Sections:
+1. Introduction and overview
+2. Why Join Us
+3. Job descriptions and job details
+4. How to Apply
+5. Responsive design
+6. Accessibility
+*/
+
 body{
     margin: 0;
 }
 
 /* Style the introduction box */
 .introduction {
-    font-family:Arial, Helvetica, sans-serif;
     background-color:#F0EFF4;
     text-align: center;
     padding: 50px;
@@ -13,11 +27,8 @@ body{
 }
 .introduction p:first-of-type{
     color:#006199;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.introduction h1{
-    font-family: 'Inter', sans-serif;
-}
+
 section h2{
     color:#006199;
 }
@@ -101,7 +112,7 @@ section h2{
         margin: 30px 20px;
     }
 
-    .join-us-left .join-us-right {
+    .join-us-left, .join-us-right {
         float: none;
         width: 100%;
         padding-right: 0;
@@ -260,3 +271,73 @@ html {
     margin: 15px 10px 15px 0;
 }
 
+/* Highlight links when they receive focus */
+.click_apply:focus,
+.review-positions:focus {
+    outline: 3px solid #293650;
+}
+/* =========================================================
+   RESPONSIVE DESIGN - JOBS PAGE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Reduce introduction spacing */
+    .introduction {
+        padding: 30px 20px;
+    }
+
+    /* Adjust the job opportunities overview */
+    .overview {
+        margin: 30px 20px;
+    }
+
+    /* Reduce heading sizes on smaller screens */
+    .join-us-left h2,.join-us-right h3 {font-size: 1.8em;}
+
+    /* Reduce spacing around job cards */
+    .job_1,.job_2,.apply {
+        margin: 30px 20px;
+        padding: 20px;
+    }
+
+    /* Stack job details above the requirements */
+    .job_1 .job-details,.job_2 .job-details {
+        float: none;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    /* Reduce list indentation */
+    .job_1 ul,.job_2 ul,.apply ul,.apply ol {
+        padding-left: 20px;
+    }
+
+    /* Adjust job reference and type labels */
+    .job-ref,.job-type {
+        margin: 5px 5px 5px 0;
+    }
+
+    /* Stack the reference number and application button */
+    .ref_num {
+        float: none;
+    }
+
+    .click_apply {
+        float: none;
+        width: 100%;
+        justify-content: center;
+        margin: 15px 0 0;
+        padding: 12px;
+    }
+
+    /* Adjust the How to Apply section */
+    .apply h2 {
+        font-size: 1.6rem;
+    }
+
+    .review-positions {
+        display: block;
+        text-align: center;
+    }
+}
