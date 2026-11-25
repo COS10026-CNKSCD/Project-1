@@ -1,9 +1,17 @@
 /*
-Filename: ABOUT.css
+Filename: about.css
 Author: Tong My Thanh Ngan
-Created: 20/10/2026
-Last modified: 20/10/2026
-Description: CSS file for About Page
+Last modified: 25/11/2026
+Description: Styles for the About Us page of G03 Clean Energy.
+
+Sections:
+1. Team introduction and group information
+2. Our Story and group photo
+3. Team member profiles and contributions
+4. Beyond the Code (Fun Facts table)
+5. Acknowledgement of Country
+6. Responsive design
+7. Accessibility and visual improvements
 */
 
 /* 1. Shared page settings ------------------------------------------------ */
