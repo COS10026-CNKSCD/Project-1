@@ -37,6 +37,11 @@ nav {
     align-items: center;                     /* vertically centers the logo, links and form */
     padding: 24px 38px;
 }
+/* Highlight the current page */
+.navigation_links a.active {
+    background-color: #293650;
+    color: white;
+}
 
 /* ---------- Left side: logo + page links ---------- */
 
@@ -146,6 +151,7 @@ nav {
 }
 
 /* Column title */
+.footer-column h2, 
 .footer-column h3 {
     font-family: "Trebuchet MS", sans-serif;
     font-size: 18px;

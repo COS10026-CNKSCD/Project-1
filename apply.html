@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Job Application Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply for job opportunities by completing our online job application form.">
+  <meta name="keywords" content="G03 Clean Energy, job application, employment, careers, renewable energy">
+  <meta name="author" content="C-Group">
+
+  <title>Apply | G03 Clean Energy</title>
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/apply.css">
       <!-- Embedded CSS -->
@@ -13,7 +18,7 @@
     </style>
 </head>
 <body>  
-        <!-- ---------- Navigation bar ---------- -->
+        <!-- Navigation bar -->
         <nav>
             <!-- Left side: logo and page links -->
             <div class="nav-left">
@@ -24,12 +29,12 @@
                 </a>
 
                 <!-- Company logo: clicking it returns to the Home page -->
-                <div class="navigation_links">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="jobs.html">Jobs</a>
-                    <a href="apply.html">Apply</a>
-                    <a href="about.html">About us</a>
-                </div>
+              <div class="navigation_links">
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="apply.html" class="active" aria-current="page">Apply</a>
+                <a href="about.html">About us</a>
+              </div>
 
             </div>
 
@@ -53,6 +58,16 @@
       <h1 id="applytitle">Job Application Form</h1>
       
       <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+
+        <!-- Privacy notice: explaining why or how the data will be used (DOB, gender, home address, phone) -->
+        <div class="privacy-notice">
+          <p><strong>Privacy Notice</strong></p>
+          <p>This form is part of a university web development project and is used for testing purposes only.</p>
+
+          <p>Your name, date of birth, gender, address, contact details, and skills are asked to demonstrate how a job application form collects and validates information.</p>
+          <p>When submitted, the information is sent to form testing service. However it is not used for real recruitment.</p>
+        </div>
+        
         <!-- 1. Position Vacancy -->
         <fieldset>
           <legend>Position Vacancy</legend>
@@ -87,7 +102,7 @@
             <label><input type="radio" name="gender" value="male" required> Male</label><br>
             <label><input type="radio" name="gender" value="female" required> Female</label><br>
             <label><input type="radio" name="gender" value="nonbinary" required> Non-binary</label><br>
-            <label><input type="radio" name="gender" value="other" required> Prefer not to say</label>
+            <label><input type="radio" name="gender" value="prefer_noy_to_say" required> Prefer not to say</label>
           </fieldset>
         </fieldset>
 
@@ -132,7 +147,12 @@
 
           <p>
             <label for="phone">Phone Number:</label><br>
-            <input type="tel" name="phone" id="phone" required pattern="^[0-9\s\-]{8,12}$" placeholder="0412345678">
+            <input type="tel" name="phone" id="phone" 
+                   required pattern="[0-9]{8,12}"
+                   maxlength="12"
+                   placeholder="0412345678"
+                   inputmode="numeric"
+                   title="Please enter 8 to 12 digits without spaces or hyphens.">
           </p>
         </fieldset>
 
@@ -142,7 +162,7 @@
 
           <fieldset>
             <legend>Skill List</legend>
-            <label><input type="checkbox" name="skills[]" value="HTML" checked="checked"> HTML</label><br>
+            <label><input type="checkbox" name="skills[]" value="HTML"> HTML</label><br>
             <label><input type="checkbox" name="skills[]" value="CSS"> CSS</label><br>
             <label><input type="checkbox" name="skills[]" value="JavaScript"> JavaScript</label><br>
             <label><input type="checkbox" name="skills[]" value="PHP"> PHP</label>
@@ -174,13 +194,13 @@
 
             <!-- Column 1: company introduction -->
             <div class="footer-column">
-                <h3>G03 Clean Energy</h3>
+                <h2>G03 Clean Energy</h2>
                 <p>Delivering clean, safe and sustainable energy solutions for communities.</p>
             </div>
 
             <!-- Column 2: quick links to the main pages -->
             <div class="footer-column">
-                <h3>Quick Links</h3>
+                <h2>Quick Links</h2>
                 <a href="index.html">Home</a>
                 <a href="jobs.html">Jobs</a>
                 <a href="apply.html">Apply</a>
@@ -189,14 +209,14 @@
 
             <!-- Column 3: project links -->
             <div class="footer-column">
-                <h3>Project Links</h3>
+                <h2>Project Links</h2>
                 <a href="https://student-team-bgzfvh3f.atlassian.net/jira/software/projects/SCRUM/boards/1?filter=&groupBy=subtask" target="_blank" rel="noopener">Jira Board</a>
                 <a href="https://github.com/COS10026-CNKSCD/Project-1" target="_blank" rel="noopener">GitHub Repository</a>
             </div>
 
             <!-- Column 4: contact information -->
             <div class="footer-column">
-                <h3>Contact</h3>
+                <h2>Contact</h2>
                 <a href="mailto:info@cgroup.com">info@cgroup.com</a>
                 <p>Phone: 0123 456 789</p>
             </div>
