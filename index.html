@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | G03 Clean Energy</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore G03 Clean Energy's renewable energy solutions, projects, and career opportunities in sustainable energy.">
+    <meta name="keywords" content="G03 Clean Energy, renewable energy, solar energy, wind energy, sustainability, clean energy careers">
+    <meta name="author" content="G03 Clean Energy">
+    <title>Home</title>
+
     
     <!-- Shared stylesheet: navigation bar and footer (used by every page) -->
     <link rel="stylesheet" href="styles/styles.css"> 
@@ -35,12 +40,12 @@
 
                 <!-- Company logo: clicking it returns to the Home page -->
                 <a href="index.html" class="logo">
-                    <img src="images/logo_.png" alt="company_logo">
+                    <img src="images/logo_.png" alt="C-Group Clean Energy logo">
                 </a>
 
                 <!-- Company logo: clicking it returns to the Home page -->
                 <div class="navigation_links">
-                    <a href="index.html" class="active">Home</a>
+                    <a href="index.html" class="active" aria-current="page">Home</a>
                     <a href="jobs.html">Jobs</a>
                     <a href="apply.html">Apply</a>
                     <a href="about.html">About us</a>
@@ -76,6 +81,11 @@
                 <!-- Title -->
                 <div class="hero-title">
                     <h1> <strong> C-GROUP </strong> </h1> 
+                </div>
+
+                <!-- Slogan -->
+                <div class="hero-slogan">
+                    <p>Clean Energy. Brighter Communities.</p>
                 </div>
 
                 <!-- Description -->
@@ -114,27 +124,27 @@
                 <!-- Stat 1: renewable energy generated -->
                 <div class="stat-item">
                     <div class="stat-icon">
-                        <img src="images/icon_1.png" alt="lightning_icon ">
+                        <img src="images/icon_1.png" alt="Lightning_bolt_icon">
                     </div>
-                    <h4>500 MW</h4>
+                    <h3>500 MW</h3>
                     <p>Renewable Energy Generated</p>
                 </div>
 
                 <!-- Stat 2: carbon emissions reduced -->
                 <div class="stat-item">
                     <div class="stat-icon">
-                        <img src="images/icon_2.png" alt="leaf_icon">
+                        <img src="images/icon_2.png" alt="Leaf_icon">
                     </div>
-                    <h4>1.2M tons CO₂</h4>
+                    <h3>1.2M tons CO₂</h3>
                     <p> Emissions Reduced</p>
                 </div>
 
                 <!-- Stat 3: households benefited -->
                 <div class="stat-item">
                     <div class="stat-icon">
-                        <img src="images/icon_3.png" alt="house_icon">
+                        <img src="images/icon_3.png" alt="House_icon">
                     </div>
-                    <h4>100,000+</h4>
+                    <h3>100,000+</h3>
                     <p>Households Benefited</p>
                 </div>
 
@@ -220,38 +230,37 @@
         <h2> Our Sustainable Energy Solutions </h2>
         <table class="solutions-table">
 
-            <!-- Table title: merge 3 columns -->
-            <tr>
-                <th colspan="3">Our Clean Energy Approach</th>
-            </tr>
-            
+            <caption>Our Clean Energy Approach</caption>
+
             <!-- Column headings -->
-            <tr>
-                <th>Solution</th>
-                <th>Main Purpose</th>
-                <th>Benefit</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Solution</th>
+                    <th>Main Purpose</th>
+                    <th>Benefit</th>
+                </tr>
+            </thead>
 
-            <!-- Solar Energy -->
-            <tr>
-                <td>Solar Energy</td>
-                <td>Generate electricity using sunlight.</td>
-                <td>Provides clean, renewable energy and reduces reliance on fossil fuels.</td>
-            </tr>
+            <!-- Table data -->
+            <tbody>
+                <tr>
+                    <td>Solar Energy</td>
+                    <td>Generate electricity using sunlight.</td>
+                    <td>Provides clean, renewable energy and reduces reliance on fossil fuels.</td>
+                </tr>
 
-            <!-- Wind Energy -->
-            <tr>
-                <td>Wind Energy</td>
-                <td>Generate electricity using wind turbines.</td>
-                <td>Reduces greenhouse gas emissions and supports clean energy production.</td>
-            </tr>
+                <tr>
+                    <td>Wind Energy</td>
+                    <td>Generate electricity using wind turbines.</td>
+                    <td>Reduces greenhouse gas emissions and supports clean energy production.</td>
+                </tr>
 
-            <!-- Energy Efficiency -->
-            <tr>
-                <td>Energy Efficiency</td>
-                <td>Reduce energy consumption through efficient technologies and practices.</td>
-                <td>Saves energy, lowers costs and reduces environmental impact.</td>
-            </tr>
+                <tr>
+                    <td>Energy Efficiency</td>
+                    <td>Reduce energy consumption through efficient technologies and practices.</td>
+                    <td>Saves energy, lowers costs and reduces environmental impact.</td>
+               </tr>
+            </tbody>
 
         </table>
 
@@ -276,7 +285,7 @@
             <a href="https://www.bbc.com/future/article/20261023-how-solar-became-bigger-than-nuclear" class="news-card-link">
 
                 <article class="news-card news-main">
-                    <img src="images/bbc_solar.jpg" alt="Solar panels in a solar farm">
+                    <img src="images/bbc_solar.jpg" alt="Solar panels installed under a clear sky">
 
                     <div class="news-content">
                         <p class="news-category">SOLAR ENERGY</p>
@@ -294,7 +303,7 @@
                 <a href="https://www.bbc.com/future/article/20250506-renewable-energys-trouble-with-wind-theft" class="news-card-link">
 
                     <article class="news-card news-secondary">
-                        <img src="images/bbc_wind.jpg" alt="Wind turbines generating renewable energy">
+                        <img src="images/bbc_wind.jpg" alt="Offshore wind turbines generating electricity">
 
                         <div class="news-content">
                             <p class="news-category">WIND ENERGY</p>
@@ -308,7 +317,7 @@
                 <a href="https://www.bbc.com/news/science-environment-60987614" class="news-card-link">
 
                     <article class="news-card news-secondary">
-                        <img src="images/bbc_sustainace.jpg" alt="Biomass energy facility">
+                        <img src="images/bbc_sustainace.jpg" alt="Green leaves representing sustainable living">
 
                         <div class="news-content">
                             <p class="news-category">SUSTAINABILITY</p>

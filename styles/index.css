@@ -1,7 +1,7 @@
 /*
 Name: Trần Hồng Vy Ái
 Student ID: 106391519
-File: home.css
+File: index.css
 Purpose: Styles for the C-Group home page.
  
 Sections in this file (same order as the page):
@@ -11,12 +11,6 @@ Sections in this file (same order as the page):
   4. Projects
   5. Latest news
 */
-
-/* * Make width and height include padding and border (easier to size boxes) */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 
 /* =========================================================
    1. HERO BANNER IMAGE
@@ -80,6 +74,16 @@ Sections in this file (same order as the page):
         0 0 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Hero slogan */
+.hero-slogan p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 12px;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #ffffff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
 /* Đoạn văn miêu tả */
 .hero-description p {
     font-size: 16px;
@@ -113,6 +117,11 @@ Sections in this file (same order as the page):
     transform: translateY(-3px);
 }
 
+/* Focus when using keyboard on the main CTA button */
+.btn-primary:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
 
 /* =========================================================
    3. INTRODUCTION
@@ -188,7 +197,7 @@ Sections in this file (same order as the page):
 }
 
 /* Statistics value (e.g. 500 MW) */
-.stat-item h4 {
+.stat-item h3 {
     font-family: "Trebuchet MS", sans-serif;
     font-size: 21px;
     color: #006199;
@@ -378,16 +387,18 @@ Sections in this file (same order as the page):
     line-height: 1.6;
 }
 
-/* Main table heading */
-.solutions-table tr:first-child th {
+/* Main table title */
+.solutions-table caption {
     background-color: #006199;
     color: white;
     text-align: center;
     font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
 }
 
 /* Column headings */
-.solutions-table tr:nth-child(2) th {
+.solutions-table thead th {
     background-color: #E3E8F1;
     color: #003B5C;
 }
@@ -463,6 +474,13 @@ Sections in this file (same order as the page):
     display: block;
     text-decoration: none;  /* removes the underline from the link */
     color: inherit;         /* keeps the text color instead of link blue */
+}
+
+/* Focus when using keyboard on the news cards */
+.news-card-link:focus-visible {
+    outline: 3px solid #006199;
+    outline-offset: 3px;
+    border-radius: 8px;
 }
 
 /* Left column: the main (big) article.
@@ -544,4 +562,218 @@ Sections in this file (same order as the page):
 /* Short description (only the main article has one) */
 .news-content p {
     margin: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN - HOME PAGE
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* 1. Introduction: change two columns to one */
+    .intro-section {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 32px;
+        padding: 32px 16px;
+    }
+
+    .intro,
+    .features-section {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        flex: none;
+        margin: 0;
+    }
+
+    .intro h2,
+    .intro p {
+        max-width: 100%;
+    }
+
+    /* 2. Statistics: stack the three items vertically */
+    .company-stats {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .stat-item {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .stat-item h4,
+    .stat-item p {
+        width: auto;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        overflow-wrap: normal;
+    }
+
+    .stat-icon img {
+        max-width: 48px;
+        height: auto;
+    }
+
+    /* 3. Feature cards */
+    .features {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .feature-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* 4. Project cards */
+    .intro-project {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 32px 16px;
+    }
+
+    .featured-projects,
+    .projects {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .project-card {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: 340px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .project-card h3 {
+        font-size: 24px;
+        max-width: 100%;
+    }
+
+    .project-card p {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    /* 5. Hero: chữ và nút nằm dưới đáy ảnh, không đè nhau */
+    .hero-image {
+        height: 600px;
+        border-radius: 24px;
+    }
+
+    .hero-text {
+        top: auto;            /* bỏ top: 45% của desktop */
+        bottom: 110px;        /* chừa chỗ cho nút bên dưới */
+        left: 6%;
+        right: 6%;
+        max-width: none;
+    }
+
+    .hero-title h1 {
+        font-size: 48px;
+        letter-spacing: 1px;
+    }
+
+    .hero-slogan p {
+        font-size: 20px;
+    }
+
+    .hero-description p {
+        font-size: 14px;
+    }
+
+    .hero-cta {
+        left: 6%;
+        bottom: 36px;
+    }
+
+    /* 6. Latest News */
+    .news-section {
+        padding: 32px 16px;
+        margin: 32px 0;
+    }
+
+    /* Bỏ chiều cao cố định và float của desktop */
+    .news-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        height: auto;
+        overflow: visible;
+    }
+
+    .news-grid > .news-card-link {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .news-right {
+        float: none;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .news-right .news-card-link {
+        height: auto;
+    }
+
+    /* grid đã có gap rồi, nên bỏ margin-top để khỏi bị cách đôi */
+    .news-right .news-card-link + .news-card-link {
+        margin-top: 0;
+    }
+
+    .news-card {
+        width: 100%;
+    }
+
+    .news-main {
+        height: 380px;
+    }
+
+    .news-secondary {
+        height: 240px;
+    }
+
+    .news-content h3 {
+        font-size: 20px;
+    }
+
+    .news-content p {
+        font-size: 14px;
+    }
 }
