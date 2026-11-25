@@ -25,6 +25,11 @@ body {
     font-family: "Trebuchet MS", sans-serif;
 }
 
+/* Images never grow wider than their container (prevents sideways scrolling on phones) */
+img {
+    max-width: 100%;
+}
+
 /* Navigation bar: logo and links on the left, search form on the right */
 nav {
     display: flex;
