@@ -255,6 +255,12 @@ html {
 .apply li {
     margin: 15px 10px 15px 0;
 }
+
+/* Highlight links when they receive focus */
+.click_apply:focus,
+.review-positions:focus {
+    outline: 3px solid #293650;
+}
 /* =========================================================
    RESPONSIVE DESIGN - JOBS PAGE
    ========================================================= */
